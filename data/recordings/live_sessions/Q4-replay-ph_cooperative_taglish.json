@@ -1,0 +1,147 @@
+{
+  "call_id": "Q4-replay-ph_cooperative_taglish",
+  "transcript": [
+    {
+      "t_start": 0.0,
+      "t_end": 12.0,
+      "speaker": "agent",
+      "text": "Hello po, this is Mia from ShieldLife, partner ng Banco Isla. Nire-record po namin ang tawag for quality and training. Hindi po ito hard sell — titingnan lang natin kung qualified po kayo sa term life o credit life cover. Pwede po bang makuha ang pangalan ninyo?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 12.0,
+      "t_end": 15.8,
+      "speaker": "customer",
+      "text": "Hello po, ako si Ana Reyes, 32, from Quezon City.",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 15.8,
+      "t_end": 17.8,
+      "speaker": "agent",
+      "text": "Ilang taon po kayo?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 17.8,
+      "t_end": 21.22,
+      "speaker": "customer",
+      "text": "Gusto ko sana term life, asawa ko ang beneficiary.",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 21.22,
+      "t_end": 23.22,
+      "speaker": "agent",
+      "text": "Ilang taon po kayo?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 23.22,
+      "t_end": 27.78,
+      "speaker": "customer",
+      "text": "Hindi po ako smoker. Magkano po ang premium for one million coverage?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 27.78,
+      "t_end": 39.78,
+      "speaker": "agent",
+      "text": "Whole-life participating plan. Premiums payable to age 60 or 20 years, whichever later. Builds cash value after year 3. Optional **riders**: accidental death, waiver of premium, critical illness (20 conditions, 90-day waiting, 30-day survival). Beneficiary must be named; if none, estate. \"Magkano ang premium\" depends on age, gender, smoker status, sum insured - never quote a number that is not on the rate card. Ilang taon po kayo?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 39.78,
+      "t_end": 42.06,
+      "speaker": "customer",
+      "text": "Sige po, pakicall back tomorrow evening.",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 42.06,
+      "t_end": 48.900000000000006,
+      "speaker": "agent",
+      "text": "I will schedule a callback (a time you prefer) and save a lead summary for a licensed advisor.",
+      "asr_latency_ms": 110.0
+    }
+  ],
+  "nudges": [
+    {
+      "id": "N001",
+      "kind": "buying_signal",
+      "text": "Buying signal. Recap plan + disclaimer and offer to create the lead / illustration.",
+      "confidence": 0.78,
+      "priority": 40,
+      "created_t": 27.78,
+      "expires_t": 87.78,
+      "evidence": "Hindi po ako smoker. Magkano po ang premium for one million coverage?",
+      "suppressed": false,
+      "suppress_reason": null
+    }
+  ],
+  "suppressed": [
+    {
+      "id": "N002",
+      "kind": "buying_signal",
+      "text": "Buying signal. Recap plan + disclaimer and offer to create the lead / illustration.",
+      "confidence": 0.78,
+      "priority": 40,
+      "created_t": 42.06,
+      "expires_t": 102.06,
+      "evidence": "Sige po, pakicall back tomorrow evening.",
+      "suppressed": true,
+      "suppress_reason": "cooldown buying_signal last=27.8s"
+    }
+  ],
+  "controller": {
+    "emitted": 1,
+    "suppressed": 1,
+    "by_kind_emitted": {
+      "buying_signal": 1
+    },
+    "by_kind_suppressed": {
+      "buying_signal": 1
+    },
+    "suppress_reasons": {
+      "cooldown buying_signal last=27.8s": 1
+    }
+  },
+  "latency": {
+    "asr": {
+      "count": 9,
+      "p50_ms": 110.0,
+      "p95_ms": 110.0,
+      "max_ms": 110.0,
+      "mean_ms": 110.0
+    },
+    "signal_extraction": {
+      "count": 9,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "max_ms": 0.0,
+      "mean_ms": 0.0
+    },
+    "nudge_control": {
+      "count": 2,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "max_ms": 0.0,
+      "mean_ms": 0.0
+    },
+    "delivery": {
+      "count": 1,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "max_ms": 0.0,
+      "mean_ms": 0.0
+    },
+    "e2e_chunk": {
+      "count": 4,
+      "p50_ms": 110.1,
+      "p95_ms": 110.1,
+      "max_ms": 110.1,
+      "mean_ms": 110.1
+    }
+  },
+  "agent_disclosed": true
+}

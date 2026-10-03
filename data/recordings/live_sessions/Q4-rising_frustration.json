@@ -1,0 +1,124 @@
+{
+  "call_id": "Q4-rising_frustration",
+  "transcript": [
+    {
+      "t_start": 0.0,
+      "t_end": 5.0,
+      "speaker": "agent",
+      "text": "Hello, this is Aisha from Sentinel Health Insurance. This call is being recorded for quality and training purposes.",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 5.0,
+      "t_end": 9.0,
+      "speaker": "customer",
+      "text": "I already told you my age, I am 42.",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 9.0,
+      "t_end": 12.0,
+      "speaker": "agent",
+      "text": "Sorry — could I have your age please?",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 12.0,
+      "t_end": 17.0,
+      "speaker": "customer",
+      "text": "This is ridiculous, you are a useless bot, I already told you twice!!",
+      "asr_latency_ms": 120.0
+    }
+  ],
+  "nudges": [
+    {
+      "id": "N001",
+      "kind": "rising_frustration",
+      "text": "Acknowledge the frustration in one sentence before asking anything else. Offer a human.",
+      "confidence": 0.88,
+      "priority": 90,
+      "created_t": 9.0,
+      "expires_t": 69.0,
+      "evidence": "I already told you my age, I am 42.",
+      "suppressed": false,
+      "suppress_reason": null
+    }
+  ],
+  "suppressed": [
+    {
+      "id": "N002",
+      "kind": "rising_frustration",
+      "text": "Acknowledge the customer's previous statement calmly and apologize for the repetition to de-escalate tension.",
+      "confidence": 0.9,
+      "priority": 90,
+      "created_t": 12.0,
+      "expires_t": 72.0,
+      "evidence": "I already told you my age, I am 42.",
+      "suppressed": true,
+      "suppress_reason": "cooldown rising_frustration last=9.0s"
+    },
+    {
+      "id": "N003",
+      "kind": "rising_frustration",
+      "text": "Acknowledge the frustration in one sentence before asking anything else. Offer a human.",
+      "confidence": 0.88,
+      "priority": 90,
+      "created_t": 17.0,
+      "expires_t": 77.0,
+      "evidence": "This is ridiculous, you are a useless bot, I already told you twice!!",
+      "suppressed": true,
+      "suppress_reason": "cooldown rising_frustration last=9.0s"
+    }
+  ],
+  "controller": {
+    "emitted": 1,
+    "suppressed": 2,
+    "by_kind_emitted": {
+      "rising_frustration": 1
+    },
+    "by_kind_suppressed": {
+      "rising_frustration": 2
+    },
+    "suppress_reasons": {
+      "cooldown rising_frustration last=9.0s": 2
+    }
+  },
+  "latency": {
+    "asr": {
+      "count": 4,
+      "p50_ms": 120.0,
+      "p95_ms": 120.0,
+      "max_ms": 120.0,
+      "mean_ms": 120.0
+    },
+    "signal_extraction": {
+      "count": 4,
+      "p50_ms": 1123.9,
+      "p95_ms": 1139.9,
+      "max_ms": 1139.9,
+      "mean_ms": 1103.0
+    },
+    "nudge_control": {
+      "count": 3,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "max_ms": 0.0,
+      "mean_ms": 0.0
+    },
+    "delivery": {
+      "count": 1,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "max_ms": 0.0,
+      "mean_ms": 0.0
+    },
+    "e2e_chunk": {
+      "count": 6,
+      "p50_ms": 1243.4,
+      "p95_ms": 1244.0,
+      "max_ms": 1244.0,
+      "mean_ms": 1210.7
+    }
+  },
+  "agent_disclosed": true
+}

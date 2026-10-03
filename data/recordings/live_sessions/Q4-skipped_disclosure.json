@@ -1,0 +1,154 @@
+{
+  "call_id": "Q4-skipped_disclosure",
+  "transcript": [
+    {
+      "t_start": 0.0,
+      "t_end": 5.0,
+      "speaker": "agent",
+      "text": "Hi, I am calling about a health plan, you are 100% covered, guaranteed approval today.",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 5.0,
+      "t_end": 9.0,
+      "speaker": "customer",
+      "text": "Really? From day one even for my diabetes?",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 9.0,
+      "t_end": 13.0,
+      "speaker": "agent",
+      "text": "Yes, pre-existing is covered from day one, no exclusions.",
+      "asr_latency_ms": 120.0
+    }
+  ],
+  "nudges": [
+    {
+      "id": "N001",
+      "kind": "compliance_gap",
+      "text": "Risky statement. Correct course: do NOT promise guaranteed cover. Restate underwriting disclaimer.",
+      "confidence": 0.93,
+      "priority": 100,
+      "created_t": 5.0,
+      "expires_t": 65.0,
+      "evidence": "Hi, I am calling about a health plan, you are 100% covered, guaranteed approval today.",
+      "suppressed": false,
+      "suppress_reason": null
+    },
+    {
+      "id": "N004",
+      "kind": "buying_signal",
+      "text": "Customer is interested in specific pre-existing condition coverage. Clarify exact waiting periods and benefits for diabetes.",
+      "confidence": 0.8,
+      "priority": 40,
+      "created_t": 9.0,
+      "expires_t": 69.0,
+      "evidence": "Really? From day one even for my diabetes?",
+      "suppressed": false,
+      "suppress_reason": null
+    }
+  ],
+  "suppressed": [
+    {
+      "id": "N002",
+      "kind": "compliance_gap",
+      "text": "Avoid absolute guarantees like '100% covered' and 'guaranteed approval' as they violate compliance guidelines.",
+      "confidence": 0.95,
+      "priority": 100,
+      "created_t": 5.0,
+      "expires_t": 65.0,
+      "evidence": "you are 100% covered, guaranteed approval today",
+      "suppressed": true,
+      "suppress_reason": "cooldown compliance_gap last=5.0s"
+    },
+    {
+      "id": "N003",
+      "kind": "compliance_gap",
+      "text": "Avoid using absolute terms like '100% covered' and 'guaranteed approval' as this may violate compliance regulations.",
+      "confidence": 0.95,
+      "priority": 100,
+      "created_t": 9.0,
+      "expires_t": 69.0,
+      "evidence": "you are 100% covered, guaranteed approval today.",
+      "suppressed": true,
+      "suppress_reason": "cooldown compliance_gap last=5.0s"
+    },
+    {
+      "id": "N005",
+      "kind": "compliance_gap",
+      "text": "Risky statement. Correct course: do NOT promise guaranteed cover. Restate underwriting disclaimer.",
+      "confidence": 0.93,
+      "priority": 100,
+      "created_t": 13.0,
+      "expires_t": 73.0,
+      "evidence": "Yes, pre-existing is covered from day one, no exclusions.",
+      "suppressed": true,
+      "suppress_reason": "cooldown compliance_gap last=5.0s"
+    },
+    {
+      "id": "N006",
+      "kind": "compliance_gap",
+      "text": "Required disclosure is missing. State name, company, recording consent before continuing.",
+      "confidence": 0.9,
+      "priority": 100,
+      "created_t": 13.0,
+      "expires_t": 73.0,
+      "evidence": "No recording/solicitation disclosure heard in the first seconds of the call.",
+      "suppressed": true,
+      "suppress_reason": "cooldown compliance_gap last=5.0s"
+    }
+  ],
+  "controller": {
+    "emitted": 2,
+    "suppressed": 4,
+    "by_kind_emitted": {
+      "compliance_gap": 1,
+      "buying_signal": 1
+    },
+    "by_kind_suppressed": {
+      "compliance_gap": 4
+    },
+    "suppress_reasons": {
+      "cooldown compliance_gap last=5.0s": 4
+    }
+  },
+  "latency": {
+    "asr": {
+      "count": 3,
+      "p50_ms": 120.0,
+      "p95_ms": 120.0,
+      "max_ms": 120.0,
+      "mean_ms": 120.0
+    },
+    "signal_extraction": {
+      "count": 3,
+      "p50_ms": 1330.1,
+      "p95_ms": 1534.0,
+      "max_ms": 1534.0,
+      "mean_ms": 1397.9
+    },
+    "nudge_control": {
+      "count": 6,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "max_ms": 0.0,
+      "mean_ms": 0.0
+    },
+    "delivery": {
+      "count": 2,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "max_ms": 0.0,
+      "mean_ms": 0.0
+    },
+    "e2e_chunk": {
+      "count": 6,
+      "p50_ms": 1450.1,
+      "p95_ms": 1654.0,
+      "max_ms": 1654.0,
+      "mean_ms": 1517.9
+    }
+  },
+  "agent_disclosed": false
+}

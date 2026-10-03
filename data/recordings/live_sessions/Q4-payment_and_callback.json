@@ -1,0 +1,101 @@
+{
+  "call_id": "Q4-payment_and_callback",
+  "transcript": [
+    {
+      "t_start": 0.0,
+      "t_end": 5.0,
+      "speaker": "agent",
+      "text": "Selamat siang, saya Sari dari MitraDana. Panggilan ini direkam untuk kualitas layanan.",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 5.0,
+      "t_end": 10.0,
+      "speaker": "customer",
+      "text": "Cicilannya mahal banget dong, gaji belum masuk, dendanya kejebak.",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 10.0,
+      "t_end": 14.0,
+      "speaker": "customer",
+      "text": "Hubungi aku setelah gajian tanggal 10, now is not a good time.",
+      "asr_latency_ms": 120.0
+    }
+  ],
+  "nudges": [
+    {
+      "id": "N001",
+      "kind": "payment_difficulty",
+      "text": "Offer an approved payment-support / lower SI / monthly mode / callback path. Do not invent a discount.",
+      "confidence": 0.8,
+      "priority": 70,
+      "created_t": 10.0,
+      "expires_t": 70.0,
+      "evidence": "Cicilannya mahal banget dong, gaji belum masuk, dendanya kejebak.",
+      "suppressed": false,
+      "suppress_reason": null
+    },
+    {
+      "id": "N002",
+      "kind": "callback_need",
+      "text": "Stop pitching. Capture a callback slot and confirm it.",
+      "confidence": 0.75,
+      "priority": 50,
+      "created_t": 14.0,
+      "expires_t": 74.0,
+      "evidence": "Hubungi aku setelah gajian tanggal 10, now is not a good time.",
+      "suppressed": false,
+      "suppress_reason": null
+    }
+  ],
+  "suppressed": [],
+  "controller": {
+    "emitted": 2,
+    "suppressed": 0,
+    "by_kind_emitted": {
+      "payment_difficulty": 1,
+      "callback_need": 1
+    },
+    "by_kind_suppressed": {},
+    "suppress_reasons": {}
+  },
+  "latency": {
+    "asr": {
+      "count": 3,
+      "p50_ms": 120.0,
+      "p95_ms": 120.0,
+      "max_ms": 120.0,
+      "mean_ms": 120.0
+    },
+    "signal_extraction": {
+      "count": 3,
+      "p50_ms": 2463.3,
+      "p95_ms": 2582.8,
+      "max_ms": 2582.8,
+      "mean_ms": 2497.4
+    },
+    "nudge_control": {
+      "count": 2,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "max_ms": 0.0,
+      "mean_ms": 0.0
+    },
+    "delivery": {
+      "count": 2,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "max_ms": 0.0,
+      "mean_ms": 0.0
+    },
+    "e2e_chunk": {
+      "count": 4,
+      "p50_ms": 2583.3,
+      "p95_ms": 2583.3,
+      "max_ms": 2583.3,
+      "mean_ms": 2574.7
+    }
+  },
+  "agent_disclosed": true
+}

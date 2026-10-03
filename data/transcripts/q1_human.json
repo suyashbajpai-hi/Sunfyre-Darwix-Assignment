@@ -1,0 +1,59 @@
+{
+  "id": "q1_human",
+  "title": "Human-assistance request",
+  "call_id": "C-6FDCFD33",
+  "qualification": {
+    "status": "Incomplete",
+    "plan": null,
+    "reasons": [
+      "still need: age, city"
+    ],
+    "zone": null,
+    "ppme_required": false,
+    "disclaimers": []
+  },
+  "slots": {
+    "name": "Arjun"
+  },
+  "lead_id": "LD-B7821290",
+  "end_reason": "escalated",
+  "flags": {
+    "unavailable": false,
+    "escalated": true,
+    "lead": true,
+    "dnc": false
+  },
+  "turns": [
+    {
+      "role": "agent",
+      "text": "Hello, this is Aisha from Sentinel Health Insurance. This call is being recorded for quality and training purposes. Insurance is the subject matter of solicitation. I am calling to see if a Sentinel health plan could be a fit for you or your family — this is only a preliminary qualification, not an approval. May I have your name to begin?"
+    },
+    {
+      "role": "customer",
+      "text": "My name is Arjun, 45, Mumbai."
+    },
+    {
+      "role": "agent",
+      "text": "What is your age?",
+      "citations": [
+        "[kb_in_premium_pricing_004 | Sentinel Health - Underwriting & Qualification Rules (Internal) > Geography | docs/underwriting_rules.md § Geography | v1.0]",
+        "[kb_in_eligibility_underwriting_007 | FAQ > Frequently Asked Questions > Buying A Policy > Do I Need A Medical Test Before Buying? | website/faq.html § Do I Need A Medical Test Before Buying? | v1.0]",
+        "[kb_in_objection_handling_004 | Objection Handling Playbook - Health Insurance Tele-Sales > Objection: \"I Am Young And Healthy, I Do Not Need It.\" | docs/objection_handling_playbook.md § Objection: \"I Am Young And Healthy, I Do Not Need It.\" | v1.0]"
+      ],
+      "confidence": 0.336,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "I want to speak to a human advisor please, not a bot."
+    },
+    {
+      "role": "agent",
+      "text": "Of course — I will connect you with a human advisor. Let me capture a callback time.",
+      "citations": [],
+      "confidence": null,
+      "action": "escalate"
+    }
+  ],
+  "transcript_path": "D:\\DarwixAI Assignment\\data\\transcripts\\q1_human.json"
+}

@@ -1,0 +1,35 @@
+# Secrets
+.env
+*.pem
+*.key
+
+# Brief / internals not for the public repo
+DarwixAI ai assignment.pdf
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# Generated caches (re-creatable by running the pipelines)
+data/cache/
+data/kb/index/*.npy
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Large/binary media produced at runtime
+data/recordings/*.wav
+data/recordings/*.mp3
+data/recordings/live_sessions/*.wav
+data/recordings/live_sessions/*.mp3
+
+# Duplicate per-call transcript dumps (keep curated q1_*.json / ph_*.json / id_*.json)
+data/transcripts/*_C-*.json
+data/transcripts/*_C-*.txt

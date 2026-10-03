@@ -1,0 +1,78 @@
+{
+  "id": "q1_oos",
+  "title": "Out-of-scope question (must not invent)",
+  "call_id": "C-647CB421",
+  "qualification": {
+    "status": "Incomplete",
+    "plan": null,
+    "reasons": [
+      "still need: age"
+    ],
+    "zone": null,
+    "ppme_required": false,
+    "disclaimers": []
+  },
+  "slots": {
+    "name": "Neha",
+    "city": "Chennai"
+  },
+  "lead_id": null,
+  "end_reason": null,
+  "flags": {
+    "unavailable": true,
+    "escalated": false,
+    "lead": false,
+    "dnc": false
+  },
+  "turns": [
+    {
+      "role": "agent",
+      "text": "Hello, this is Aisha from Sentinel Health Insurance. This call is being recorded for quality and training purposes. Insurance is the subject matter of solicitation. I am calling to see if a Sentinel health plan could be a fit for you or your family — this is only a preliminary qualification, not an approval. May I have your name to begin?"
+    },
+    {
+      "role": "customer",
+      "text": "Hi I am Neha, 29, from Chennai, just myself, no conditions."
+    },
+    {
+      "role": "agent",
+      "text": "What is your age?",
+      "citations": [],
+      "confidence": 0.249,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "What is the stock price of Sentinel Health?"
+    },
+    {
+      "role": "agent",
+      "text": "I do not have that information in our knowledge base, so I will not guess. I can connect you with a licensed advisor who can check and call you back.",
+      "citations": [],
+      "confidence": 0.29,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Do you sell motor insurance?"
+    },
+    {
+      "role": "agent",
+      "text": "I do not have that information in our knowledge base, so I will not guess. I can connect you with a licensed advisor who can check and call you back.",
+      "citations": [],
+      "confidence": 0.142,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Who is your CEO?"
+    },
+    {
+      "role": "agent",
+      "text": "I do not have that information in our knowledge base, so I will not guess. I can connect you with a licensed advisor who can check and call you back.",
+      "citations": [],
+      "confidence": 0.0,
+      "action": null
+    }
+  ],
+  "transcript_path": "D:\\DarwixAI Assignment\\data\\transcripts\\q1_oos.json"
+}

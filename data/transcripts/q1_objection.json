@@ -1,0 +1,108 @@
+{
+  "id": "q1_objection",
+  "title": "Objection — too expensive / employer cover",
+  "call_id": "C-80248999",
+  "qualification": {
+    "status": "Qualified",
+    "plan": "Essential",
+    "reasons": [
+      "age 30 is inside 18–65; suggested plan Essential"
+    ],
+    "zone": "A",
+    "ppme_required": false,
+    "disclaimers": [
+      "Eligibility is preliminary and subject to underwriting; this is not an approval.",
+      "Any premium mentioned is indicative, exclusive of 18% GST, and subject to underwriting."
+    ]
+  },
+  "slots": {
+    "name": "Priya",
+    "age": "30",
+    "city": "Bengaluru",
+    "callback_time": "call me back Friday."
+  },
+  "lead_id": "LD-1DF2960C",
+  "end_reason": null,
+  "flags": {
+    "unavailable": true,
+    "escalated": false,
+    "lead": true,
+    "dnc": false
+  },
+  "turns": [
+    {
+      "role": "agent",
+      "text": "Hello, this is Aisha from Sentinel Health Insurance. This call is being recorded for quality and training purposes. Insurance is the subject matter of solicitation. I am calling to see if a Sentinel health plan could be a fit for you or your family — this is only a preliminary qualification, not an approval. May I have your name to begin?"
+    },
+    {
+      "role": "customer",
+      "text": "This is Priya."
+    },
+    {
+      "role": "agent",
+      "text": "What is your age?",
+      "citations": [
+        "[kb_in_customer_service_007 | Sentinel Health - Customer Service Log Export (Jan 2024) | docs/customer_service_log.txt | v1.0]"
+      ],
+      "confidence": 0.77,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "I am 30, from Bengaluru."
+    },
+    {
+      "role": "agent",
+      "text": "Who would you like to cover — just yourself, or spouse and children as well?",
+      "citations": [
+        "[kb_in_premium_pricing_004 | Sentinel Health - Underwriting & Qualification Rules (Internal) > Geography | docs/underwriting_rules.md § Geography | v1.0]",
+        "[kb_in_customer_service_002 | Sentinel Health - Customer Service Log Export (Jan 2024) | docs/customer_service_log.txt | v1.0]",
+        "[kb_in_policy_terms_004 | Sentinel Family Shield - Policy Wording > General Conditions > Free Look: The Policyholder May Return The Policy Within 30 Days Of Receipt Stating | docs/policy_wording_family_shield.pdf § page 2 | v1.0]"
+      ],
+      "confidence": 0.53,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Just myself for now."
+    },
+    {
+      "role": "agent",
+      "text": "Who would you like to cover — just yourself, or spouse and children as well?",
+      "citations": [],
+      "confidence": 0.0,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "It is too expensive, I already have cover from my employer."
+    },
+    {
+      "role": "agent",
+      "text": "\"That is a great start. Employer cover ends when you change jobs or retire, and most group plans are Rs 3 to 5 lakh shared across the family. A personal policy bought while you are young keeps waiting periods served and locks in lifetime renewability. Many customers keep both - the personal policy as a top-up.\" Who would you like to cover — just yourself, or spouse and children as well?",
+      "citations": [
+        "[kb_in_objection_handling_003 | Objection Handling Playbook - Health Insurance Tele-Sales > Objection: \"I Already Have Cover From My Employer.\" | docs/objection_handling_playbook.md § Objection: \"I Already Have Cover From My Employer.\" | v1.0]",
+        "[kb_in_objection_handling_002 | Objection Handling Playbook - Health Insurance Tele-Sales > Objection: \"It Is Too Expensive.\" | docs/objection_handling_playbook.md § Objection: \"It Is Too Expensive.\" | v1.0]",
+        "[kb_in_objection_handling_008 | Objection Handling Playbook - Health Insurance Tele-Sales > Objection: \"Waiting Periods Are Too Long.\" | docs/objection_handling_playbook.md § Objection: \"Waiting Periods Are Too Long.\" | v1.0]"
+      ],
+      "confidence": 0.674,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Okay, send me a summary and call me back Friday."
+    },
+    {
+      "role": "agent",
+      "text": "I will schedule a callback (call me back Friday.) and save a lead summary for a licensed advisor. Eligibility is preliminary and subject to underwriting; this is not an approval. Any premium mentioned is indicative, exclusive of 18% GST, and subject to underwriting.",
+      "citations": [
+        "[kb_in_objection_handling_006 | Objection Handling Playbook - Health Insurance Tele-Sales > Objection: \"I Need To Discuss With My Spouse / Family.\" | docs/objection_handling_playbook.md § Objection: \"I Need To Discuss With My Spouse / Family.\" | v1.0]",
+        "[kb_in_claims_003 | Sentinel Family Shield - Policy Wording > Claims > Reimbursement: Submit The Claim Form, Discharge Summary, Original Bills And Receipts, | docs/policy_wording_family_shield.pdf § page 2 | v1.0]",
+        "[kb_in_company_002 | Sentinel Health Insurance > Health Cover That Actually Pays When It Matters > How To Buy | website/index.html § How To Buy | v1.0]"
+      ],
+      "confidence": 0.733,
+      "action": "schedule_callback"
+    }
+  ],
+  "transcript_path": "D:\\DarwixAI Assignment\\data\\transcripts\\q1_objection.json"
+}

@@ -1,0 +1,131 @@
+{
+  "id": "q1_cooperative",
+  "title": "Cooperative customer",
+  "call_id": "C-F6CED511",
+  "qualification": {
+    "status": "Qualified",
+    "plan": "Family Shield",
+    "reasons": [
+      "age 34 is inside 18–65; suggested plan Family Shield"
+    ],
+    "zone": "A",
+    "ppme_required": false,
+    "disclaimers": [
+      "Eligibility is preliminary and subject to underwriting; this is not an approval.",
+      "Any premium mentioned is indicative, exclusive of 18% GST, and subject to underwriting."
+    ]
+  },
+  "slots": {
+    "name": "Rohan Mehta",
+    "age": "34",
+    "city": "Pune",
+    "members": "Family Shield with 10 lakh cover sounds right.",
+    "conditions": "none",
+    "sum_insured": "10 lakh"
+  },
+  "lead_id": "LD-82B8E38C",
+  "end_reason": null,
+  "flags": {
+    "unavailable": false,
+    "escalated": false,
+    "lead": true,
+    "dnc": false
+  },
+  "turns": [
+    {
+      "role": "agent",
+      "text": "Hello, this is Aisha from Sentinel Health Insurance. This call is being recorded for quality and training purposes. Insurance is the subject matter of solicitation. I am calling to see if a Sentinel health plan could be a fit for you or your family — this is only a preliminary qualification, not an approval. May I have your name to begin?"
+    },
+    {
+      "role": "customer",
+      "text": "Hi, my name is Rohan Mehta."
+    },
+    {
+      "role": "agent",
+      "text": "What is your age?",
+      "citations": [
+        "[kb_in_customer_service_004 | Sentinel Health - Customer Service Log Export (Jan 2024) | docs/customer_service_log.txt | v1.0]",
+        "[kb_in_forms_003 | Health Insurance Proposal Form > Insured Members | forms/proposal_form.json § Insured Members | v1.0]",
+        "[kb_in_forms_001 | Health Insurance Proposal Form > Proposer Details | forms/proposal_form.json § Proposer Details | v1.0]"
+      ],
+      "confidence": 0.31,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "I am 34 years old, I live in Pune."
+    },
+    {
+      "role": "agent",
+      "text": "Who would you like to cover — just yourself, or spouse and children as well?",
+      "citations": [
+        "[kb_in_premium_pricing_006 | FAQ > Frequently Asked Questions > Premiums And Payment > How Much Does It Cost? | website/faq.html § How Much Does It Cost? | v1.0]",
+        "[kb_in_eligibility_underwriting_003 | Sentinel Health - Underwriting & Qualification Rules (Internal) > Entry Age | docs/underwriting_rules.md § Entry Age | v1.0]",
+        "[kb_in_premium_pricing_009 | FAQ > Frequently Asked Questions > Premiums And Payment > Will My Premium Increase Every Year? | website/faq.html § Will My Premium Increase Every Year? | v1.0]"
+      ],
+      "confidence": 0.405,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "I want to cover myself, my wife and one child."
+    },
+    {
+      "role": "agent",
+      "text": "Any declared health conditions I should note, such as diabetes or blood pressure?",
+      "citations": [
+        "[kb_in_premium_pricing_006 | FAQ > Frequently Asked Questions > Premiums And Payment > How Much Does It Cost? | website/faq.html § How Much Does It Cost? | v1.0]",
+        "[kb_in_product_019 | Plans > Our Health Insurance Plans > Sentinel Family Shield | website/plans.html § Sentinel Family Shield | v1.0]",
+        "[kb_in_company_002 | Sentinel Health Insurance > Health Cover That Actually Pays When It Matters > How To Buy | website/index.html § How To Buy | v1.0]"
+      ],
+      "confidence": 0.418,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "No health issues, we are all healthy."
+    },
+    {
+      "role": "agent",
+      "text": "Based on what you have shared, preliminary status is Qualified for Family Shield. age 34 is inside 18–65; suggested plan Family Shield. Eligibility is preliminary and subject to underwriting; this is not an approval. Any premium mentioned is indicative, exclusive of 18% GST, and subject to underwriting. I can create a lead and arrange a callback with a licensed advisor. What time works for you?",
+      "citations": [
+        "[kb_in_objection_handling_004 | Objection Handling Playbook - Health Insurance Tele-Sales > Objection: \"I Am Young And Healthy, I Do Not Need It.\" | docs/objection_handling_playbook.md § Objection: \"I Am Young And Healthy, I Do Not Need It.\" | v1.0]",
+        "[kb_in_product_011 | Sentinel Family Shield - Policy Wording > Coverage > Day Care Treatment: All Day Care Procedures Are Covered. | docs/policy_wording_family_shield.pdf § page 1 | v1.0]",
+        "[kb_in_premium_pricing_004 | Sentinel Health - Underwriting & Qualification Rules (Internal) > Geography | docs/underwriting_rules.md § Geography | v1.0]"
+      ],
+      "confidence": 0.526,
+      "action": "create_lead"
+    },
+    {
+      "role": "customer",
+      "text": "Family Shield with 10 lakh cover sounds right."
+    },
+    {
+      "role": "agent",
+      "text": "Based on what you have shared, preliminary status is Qualified for Family Shield. age 34 is inside 18–65; suggested plan Family Shield. Eligibility is preliminary and subject to underwriting; this is not an approval. Any premium mentioned is indicative, exclusive of 18% GST, and subject to underwriting. I can create a lead and arrange a callback with a licensed advisor. What time works for you?",
+      "citations": [
+        "[kb_in_product_019 | Plans > Our Health Insurance Plans > Sentinel Family Shield | website/plans.html § Sentinel Family Shield | v1.0]",
+        "[kb_in_premium_pricing_006 | FAQ > Frequently Asked Questions > Premiums And Payment > How Much Does It Cost? | website/faq.html § How Much Does It Cost? | v1.0]",
+        "[kb_in_policy_terms_002 | Sentinel Family Shield - Policy Wording > Definitions | docs/policy_wording_family_shield.pdf § page 1 | v1.0]"
+      ],
+      "confidence": 0.55,
+      "action": "create_lead"
+    },
+    {
+      "role": "customer",
+      "text": "Please create the lead and call me tomorrow at 6 pm."
+    },
+    {
+      "role": "agent",
+      "text": "Based on what you have shared, preliminary status is Qualified for Family Shield. age 34 is inside 18–65; suggested plan Family Shield. Eligibility is preliminary and subject to underwriting; this is not an approval. Any premium mentioned is indicative, exclusive of 18% GST, and subject to underwriting. I can create a lead and arrange a callback with a licensed advisor. What time works for you?",
+      "citations": [
+        "[kb_in_compliance_005 | Mandatory Call Disclosures & Conduct Rules (Compliance) > Do-not-call | docs/compliance_disclosures.md § Do-not-call | v1.0]",
+        "[kb_in_partnership_005 | Branch Partners > Become A Sentinel Branch Partner > Contact The Partnerships Team | website/partners.html § Contact The Partnerships Team | v1.0]",
+        "[kb_in_qualification_rules_001 | Sentinel Health - Underwriting & Qualification Rules (Internal) > Lead Qualification Criteria (for Tele-sales And Voice Agents) | docs/underwriting_rules.md § Lead Qualification Criteria (for Tele-sales And Voice Agents) | v1.0]"
+      ],
+      "confidence": 0.435,
+      "action": "create_lead"
+    }
+  ],
+  "transcript_path": "D:\\DarwixAI Assignment\\data\\transcripts\\q1_cooperative.json"
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Locales · Sunfyre</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/app.css?v=3">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">
+    <div class="mark">SF</div>
+    <div><h1>Multilingual agents</h1><small>PH Taglish · ID Bahasa</small></div>
+  </a>
+  <nav class="nav">
+    <a href="/">Home</a>
+    <a href="/agent">Voice</a>
+    <a href="/kb">Knowledge</a>
+    <a class="active" href="/native">Locales</a>
+    <a href="/live">Live coach</a>
+  </nav>
+</header>
+<div class="split">
+  <section class="chat-pane">
+    <p class="hint">These agents are culturally adapted for each market — not translations of the India script. Philippines runs ShieldLife bancassurance, Indonesia runs MitraDana multifinance. Type in Taglish or Bahasa below. Speech input may not work on restricted networks.</p>
+    <div class="composer" style="margin-top:0">
+      <select id="market">
+        <option value="PH">Philippines — ShieldLife</option>
+        <option value="ID">Indonesia — MitraDana</option>
+      </select>
+      <button id="start">Start call</button>
+      <button id="talk" class="secondary" disabled>Talk</button>
+      <span class="hint" id="meta"></span>
+    </div>
+    <div class="log" id="log" style="margin-top:12px"></div>
+    <div class="composer">
+      <input id="text" placeholder="Type in Taglish, Bahasa, or Jawa-influenced phrasing…" disabled>
+      <button id="send" disabled>Send</button>
+    </div>
+  </section>
+  <aside class="side">
+    <h2>Market</h2>
+    <div class="side-card hint">ASR auto-detects code-switching between languages. TTS uses native Edge neural voices for Filipino and Indonesian.</div>
+    <h2>Try</h2>
+    <div class="side-card">
+      <p class="hint">PH: "Magkano po ang premium for one million?"</p>
+      <p class="hint">ID: "Cicilannya telat, dendanya kejebak."</p>
+      <p class="hint" style="margin:0">ID Jawa: "Nggih Pak, monggo dicek tenornya."</p>
+    </div>
+  </aside>
+</div>
+<script>
+let callId=null, market='PH';
+const logEl=document.getElementById('log');
+function add(role,text){
+  const d=document.createElement('div');
+  d.className='msg '+(role==='cust'||role==='customer'?'cust':'agent');
+  d.innerHTML=`<div class="who">${role==='cust'||role==='customer'?'You':'Agent'}</div>${text}`;
+  logEl.appendChild(d); logEl.scrollTop=logEl.scrollHeight;
+}
+function tts(text, lang){ new Audio('/native/tts?lang='+lang+'&text='+encodeURIComponent(text)).play().catch(()=>{}); }
+document.getElementById('start').onclick=async()=>{
+  market=document.getElementById('market').value;
+  const r=await fetch('/native/start/'+market,{method:'POST'});
+  const d=await r.json(); callId=d.call_id; logEl.innerHTML='';
+  add('agent', d.reply); tts(d.reply, market==='PH'?'fil':'id');
+  document.getElementById('meta').textContent = d.company+' · '+d.use_case;
+  document.getElementById('text').disabled=false; document.getElementById('send').disabled=false;
+  document.getElementById('talk').disabled=false;
+};
+let listening=false;
+document.getElementById('talk').onclick=()=>{
+  const SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  if(!SR){ add('agent','Browser speech API not available — please type your response.'); return; }
+  if(listening) return;
+  const rec=new SR();
+  rec.lang = market==='PH' ? 'fil-PH' : 'id-ID';
+  rec.interimResults=false; rec.continuous=false;
+  listening=true; document.getElementById('talk').textContent='Listening…';
+  rec.onresult=e=>{
+    const said=(e.results[0]&&e.results[0][0]&&e.results[0][0].transcript)||'';
+    if(!said) return;
+    add('cust', said);
+    fetch('/native/turn-text',{method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({call_id:callId,text:said,market})})
+      .then(r=>r.json()).then(d=>{
+        const reply=d.reply||'I did not catch that.';
+        add('agent', reply); tts(reply, market==='PH'?'fil':'id');
+      });
+  };
+  rec.onerror=e=>{
+    const err=e.error||'';
+    if(err==='aborted'||err==='no-speech') return;
+    if(err==='network'||err==='service-not-allowed'){
+      add('agent','Speech service unavailable on this network. Please type your response.');
+      return;
+    }
+    add('agent','Speech input failed ('+err+'). Please type instead.');
+  };
+  rec.onend=()=>{listening=false; document.getElementById('talk').textContent='Talk';};
+  rec.start();
+};
+async function send(){
+  const inp=document.getElementById('text'); const t=inp.value.trim(); if(!t) return; inp.value='';
+  add('cust', t);
+  const r=await fetch('/native/turn-text',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({call_id:callId,text:t,market})});
+  const d=await r.json(); add('agent', d.reply); tts(d.reply, market==='PH'?'fil':'id');
+}
+document.getElementById('send').onclick=send;
+document.getElementById('text').addEventListener('keydown',e=>{if(e.key==='Enter')send();});
+</script>
+</body>
+</html>

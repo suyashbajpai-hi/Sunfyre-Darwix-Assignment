@@ -1,0 +1,44 @@
+SENTINEL HEALTH - CUSTOMER SERVICE LOG EXPORT (Jan 2024)
+Exported by CS team. Contains customer details - INTERNAL ONLY.
+
+-----
+Ticket #CS-24-0113
+Customer: Mr. Arvind Menon, mobile +91 98450 22113, email arvind.menon77@gmail.com
+Policy: POL-FS-2022-104477 (Family Shield, 10 lakh)
+Issue: Cashless pre-authorisation at Manipal Hospital Bengaluru took 5 hours instead of the promised 2 hours.
+Resolution: Delay was due to incomplete clinical notes from hospital. Explained that the 2-hour TAT is measured from receipt of complete documents. Customer satisfied. Added Rs 500 goodwill voucher.
+
+-----
+Ticket #CS-24-0129
+Customer: Mrs. Shalini Rao, mobile 9820011456, DOB: 03/11/1971
+Policy: POL-ES-2023-220981 (Essential, 5 lakh)
+Issue: Wants to know whether cataract surgery is covered. Policy started 14 Feb 2023.
+Resolution: Cataract is a listed specific illness with a 24-month waiting period. Covered from 14 Feb 2025. Day-care procedure, no 24-hour admission needed. Customer informed.
+
+-----
+Ticket #CS-24-0142
+Customer: Rohan Deshpande, 7045 889 112, rohan.d@outlook.com
+Policy: POL-ES-2023-233105
+Issue: Missed monthly premium on 5 Jan. Asks if policy is still active.
+Resolution: Monthly mode grace period is 15 days, so policy remains in force till 20 Jan. Advised to pay before 20 Jan to avoid lapse. Payment received 12 Jan. No break in cover.
+
+-----
+Ticket #CS-24-0150
+Customer: Dr. Kavita Iyer, mobile +91-99000-45678
+Policy: POL-SC-2021-098812 (Senior Care for her mother, age 72)
+Issue: Claim of Rs 1,84,000 settled at Rs 1,47,200. Wants to know why.
+Resolution: 20% mandatory copayment on Senior Care = Rs 36,800. Explained the copay clause and the Co-pay Waiver rider option at renewal. Customer acknowledged.
+
+-----
+Ticket #CS-24-0163
+Customer: Imran Sheikh, 88790 33451
+Policy: none yet (prospect)
+Issue: Asked whether his father aged 82 can be covered.
+Resolution: Senior Care entry age is 61 to 80. Not eligible for a new policy at 82. Suggested checking whether the father has an existing policy that can be ported or renewed (renewal is lifetime). Lead closed - not eligible.
+
+-----
+Ticket #CS-24-0171
+Customer: Priya Nambiar, priya.nambiar@yahoo.co.in, Aadhaar 4521 8877 0912 (customer shared voluntarily - DO NOT STORE, flagged to compliance)
+Policy: POL-FS-2020-077123
+Issue: Asked if her newborn (born 2 Jan 2024) can be added mid-term.
+Resolution: Newborn can be added from 91 days of age by endorsement with pro-rata premium; before 91 days the baby is covered under the maternity benefit's newborn cover up to the maternity limit. Endorsement request logged.

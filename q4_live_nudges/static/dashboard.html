@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Live coach · Sunfyre</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/app.css?v=3">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">
+    <div class="mark">SF</div>
+    <div><h1>Live coaching</h1><small>Real-time call signals</small></div>
+  </a>
+  <nav class="nav">
+    <a href="/">Home</a>
+    <a href="/agent">Voice</a>
+    <a href="/kb">Knowledge</a>
+    <a href="/native">Locales</a>
+    <a class="active" href="/live">Live coach</a>
+  </nav>
+</header>
+<p class="hint" style="padding:16px 22px 0;margin:0">Audio is processed in timed chunks as it streams — this is not a post-call batch analysis. Select a scenario to observe emitted nudges, suppressed alerts, and latency telemetry.</p>
+<div class="toolbar" id="btns"></div>
+<div class="dash">
+  <div class="panel"><h2>Transcript</h2><div id="tr" class="hint">Select a scenario above.</div></div>
+  <div class="panel"><h2>Nudges</h2><div id="nu" class="hint">—</div><h2>Suppressed</h2><div id="su" class="hint">—</div></div>
+  <div class="panel" style="grid-column:1/-1"><h2>Latency</h2><div id="lat"></div></div>
+</div>
+<script>
+const names = ["missed_cross_sell","skipped_disclosure","rising_frustration","noisy_ambiguous","payment_and_callback"];
+const btns = document.getElementById('btns');
+names.forEach(n => {
+  const b = document.createElement('button'); b.textContent = n.replaceAll('_',' '); b.onclick = () => run(n); btns.appendChild(b);
+});
+const all = document.createElement('button'); all.textContent = 'Run all'; all.onclick = () => run('all'); btns.appendChild(all);
+['q1_cooperative','q1_oos','ph_cooperative_taglish','id_colloquial_denda'].forEach(stem => {
+  const b = document.createElement('button'); b.textContent = 'Replay ' + stem.replaceAll('_',' '); b.onclick = () => replay(stem); btns.appendChild(b);
+});
+async function replay(stem) {
+  document.getElementById('tr').textContent = 'Replaying ' + stem + ' …';
+  const r = await fetch('/live/replay-transcript/' + stem + '?fast=true', {method:'POST'});
+  const data = await r.json();
+  if (data.error) { document.getElementById('tr').textContent = data.error; return; }
+  const full = await fetch('/live/last/replay:' + stem).then(x => x.json());
+  paint(full);
+}
+async function run(name) {
+  document.getElementById('tr').textContent = 'Running ' + name + ' …';
+  const r = await fetch('/live/run/' + name + '?fast=true', {method:'POST'});
+  const data = await r.json();
+  const first = data.results[data.results.length-1];
+  const full = await fetch('/live/last/' + first.name).then(x => x.json());
+  paint(full);
+}
+function paint(full) {
+  document.getElementById('tr').innerHTML = (full.transcript||[]).map(t =>
+    `<div class="line ${t.speaker}"><b>${t.speaker}</b> ${t.text}</div>`).join('') || '—';
+  document.getElementById('nu').innerHTML = (full.nudges||[]).map(n =>
+    `<div class="nudge ${n.kind}"><b>${n.kind}</b> · ${n.confidence}<br>${n.text}<br><i>${n.evidence}</i></div>`).join('') || '<em>none</em>';
+  document.getElementById('su').innerHTML = (full.suppressed||[]).map(n =>
+    `<div class="cite">${n.kind} — ${n.suppress_reason}</div>`).join('') || '<em>none</em>';
+  const lat = full.latency || {};
+  document.getElementById('lat').innerHTML = '<table><tr><th>component</th><th>n</th><th>p50</th><th>p95</th><th>mean</th></tr>' +
+    Object.entries(lat).map(([k,s]) => `<tr><td>${k}</td><td>${s.count}</td><td>${s.p50_ms}</td><td>${s.p95_ms}</td><td>${s.mean_ms}</td></tr>`).join('') + '</table>';
+}
+try {
+  const ws = new WebSocket((location.protocol==='https:'?'wss':'ws') + '://' + location.host + '/live/ws');
+  ws.onmessage = ev => console.log('nudge ws', ev.data);
+} catch (e) {}
+</script>
+</body>
+</html>

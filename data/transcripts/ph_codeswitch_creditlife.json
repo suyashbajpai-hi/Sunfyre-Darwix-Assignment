@@ -1,0 +1,55 @@
+{
+  "id": "ph_codeswitch_creditlife",
+  "title": "PH mixed English finance terms + out of scope",
+  "market": "PH",
+  "call_id": "C-B1AEB8B2",
+  "slots": {
+    "name": "Bea",
+    "city": "Banco Isla"
+  },
+  "qualification": {
+    "status": "Incomplete",
+    "plan": null,
+    "reasons": [
+      "still need: age"
+    ],
+    "zone": null,
+    "ppme_required": false,
+    "disclaimers": []
+  },
+  "lead_id": null,
+  "end_reason": null,
+  "turns": [
+    {
+      "role": "agent",
+      "text": "Hello po, this is Mia from ShieldLife, partner ng Banco Isla. Nire-record po namin ang tawag for quality and training. Hindi po ito hard sell — titingnan lang natin kung qualified po kayo sa term life o credit life cover. Pwede po bang makuha ang pangalan ninyo?"
+    },
+    {
+      "role": "customer",
+      "text": "Hi I'm Bea, 28, Cebu. Wala akong loan sa Banco Isla."
+    },
+    {
+      "role": "agent",
+      "text": "Ilang taon po kayo?",
+      "citations": [
+        "[kb_ph_eligibility_underwriting_001 | ShieldLife × Banco Isla - Product Guide (Philippines) > Credit Life (bank Referral) | products.md § Credit Life (bank Referral) | v1.0]",
+        "[kb_ph_company_001 | ShieldLife × Banco Isla - Product Guide (Philippines) | products.md | v1.0]",
+        "[kb_ph_premium_pricing_001 | ShieldLife PH - Qualification & Compliance > Mandatory On Every Call | qualification.md § Mandatory On Every Call | v1.0]"
+      ],
+      "confidence": 0.483,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Pwede ba credit life? Also what is ShieldLife stock price?"
+    },
+    {
+      "role": "agent",
+      "text": "Wala po akong exact na detalye niyan sa knowledge base namin, kaya hindi ko po i-ge-guess. Pwede po kitang i-refer sa licensed advisor sa branch.",
+      "citations": [],
+      "confidence": 0.29,
+      "action": null
+    }
+  ],
+  "transcript_path": "D:\\DarwixAI Assignment\\data\\transcripts\\ph_codeswitch_creditlife.json"
+}

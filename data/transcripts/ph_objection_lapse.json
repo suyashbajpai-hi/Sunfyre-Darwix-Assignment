@@ -1,0 +1,69 @@
+{
+  "id": "ph_objection_lapse",
+  "title": "PH objection + human escalation",
+  "market": "PH",
+  "call_id": "C-64C4C960",
+  "slots": {
+    "name": "Carlo"
+  },
+  "qualification": {
+    "status": "Incomplete",
+    "plan": null,
+    "reasons": [
+      "still need: age"
+    ],
+    "zone": null,
+    "ppme_required": false,
+    "disclaimers": []
+  },
+  "lead_id": "LD-1913947B",
+  "end_reason": "escalated",
+  "turns": [
+    {
+      "role": "agent",
+      "text": "Hello po, this is Mia from ShieldLife, partner ng Banco Isla. Nire-record po namin ang tawag for quality and training. Hindi po ito hard sell — titingnan lang natin kung qualified po kayo sa term life o credit life cover. Pwede po bang makuha ang pangalan ninyo?"
+    },
+    {
+      "role": "customer",
+      "text": "This is Carlo, 40, Makati, smoker."
+    },
+    {
+      "role": "agent",
+      "text": "Ilang taon po kayo?",
+      "citations": [
+        "[kb_ph_objection_handling_007 | ShieldLife - Objection & FAQ Playbook (PH) > FAQ: Pwede Ba Ang Smoker? | objections_faq.md § FAQ: Pwede Ba Ang Smoker? | v1.0]",
+        "[kb_ph_qualification_rules_001 | ShieldLife PH - Qualification & Compliance > Qualification (Term / Whole Life) | qualification.md § Qualification (Term / Whole Life) | v1.0]",
+        "[kb_ph_product_002 | ShieldLife × Banco Isla - Product Guide (Philippines) > ShieldLife Whole Life | products.md § ShieldLife Whole Life | v1.0]"
+      ],
+      "confidence": 0.321,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Baka mag-lapse, sayang. May insurance na ako sa office."
+    },
+    {
+      "role": "agent",
+      "text": "Ilang taon po kayo?",
+      "citations": [
+        "[kb_ph_objection_handling_004 | ShieldLife - Objection & FAQ Playbook (PH) > Objection: \"Baka Mag-lapse, Sayang.\" | objections_faq.md § Objection: \"Baka Mag-lapse, Sayang.\" | v1.0]",
+        "[kb_ph_objection_handling_003 | ShieldLife - Objection & FAQ Playbook (PH) > Objection: \"May Insurance Na Ako Sa Office.\" | objections_faq.md § Objection: \"May Insurance Na Ako Sa Office.\" | v1.0]",
+        "[kb_ph_product_003 | ShieldLife × Banco Isla - Product Guide (Philippines) > Bancassurance Conduct | products.md § Bancassurance Conduct | v1.0]"
+      ],
+      "confidence": 0.842,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Gusto ko kausapin ang tao sa branch, please."
+    },
+    {
+      "role": "agent",
+      "text": "Sige po, i-e-escalate kita sa tao / licensed advisor. Anong oras po kayo available for callback?",
+      "citations": [],
+      "confidence": null,
+      "action": "escalate"
+    }
+  ],
+  "transcript_path": "D:\\DarwixAI Assignment\\data\\transcripts\\ph_objection_lapse.json"
+}

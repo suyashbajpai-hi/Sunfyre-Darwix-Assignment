@@ -1,0 +1,57 @@
+{
+  "kb_version": "2026.10.01-3",
+  "built_at": "2026-10-01T23:33:50",
+  "record_count": 131,
+  "document_count": 18,
+  "failed_documents": [
+    "docs/corrupted_scan.pdf: PdfStreamError: Stream has ended unexpectedly"
+  ],
+  "superseded_documents": [
+    "docs/marketing_brochure_2023.txt"
+  ],
+  "categories": {
+    "compliance": 6,
+    "customer_service": 7,
+    "objection_handling": 19,
+    "premium_pricing": 12,
+    "policy_terms": 6,
+    "product": 16,
+    "waiting_periods": 3,
+    "exclusions": 13,
+    "eligibility_underwriting": 10,
+    "claims": 6,
+    "qualification_rules": 3,
+    "forms": 5,
+    "faq": 16,
+    "company": 4,
+    "partnership": 5
+  },
+  "markets": {
+    "IN": 94,
+    "PH": 18,
+    "ID": 19
+  },
+  "embedding_model": null,
+  "source_hashes": {
+    "IN/docs/compliance_disclosures.md": "b55e270039fd",
+    "IN/docs/corrupted_scan.pdf": "efe0a2b64fca",
+    "IN/docs/customer_service_log.txt": "9b1b9c8a3e8d",
+    "IN/docs/marketing_brochure_2023.txt": "7db59de661ca",
+    "IN/docs/objection_handling_playbook.md": "d961fccfcaef",
+    "IN/docs/plan_rates.csv": "d64157575c26",
+    "IN/docs/policy_wording_family_shield.pdf": "7c163cc25ef7",
+    "IN/docs/underwriting_rules.md": "baf9b760193f",
+    "IN/forms/proposal_form.json": "469caabdf9ad",
+    "IN/website/faq.html": "df71781d5a28",
+    "IN/website/index.html": "54125c442725",
+    "IN/website/partners.html": "6218822b1751",
+    "IN/website/plans.html": "9fc85740ebb2",
+    "PH/objections_faq.md": "7752582e40ce",
+    "PH/products.md": "c2f6b1e82444",
+    "PH/qualification.md": "c633710c8d3f",
+    "ID/keberatan_faq.md": "7795c8200aa0",
+    "ID/kepatuhan.md": "6827ca3777cc",
+    "ID/produk.md": "d4d15d38ca37"
+  },
+  "content_digest": "cc4e9c0f"
+}

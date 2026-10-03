@@ -1,0 +1,58 @@
+{
+  "form_name": "Health Insurance Proposal Form",
+  "form_code": "SHI-PF-04",
+  "version": "April 2024",
+  "sections": [
+    {
+      "title": "Proposer Details",
+      "fields": [
+        {"name": "FullName", "label": "Full Name (as per ID)", "type": "text", "required": true},
+        {"name": "dob", "label": "Date of Birth (DD/MM/YYYY)", "type": "date", "required": true},
+        {"name": "Gender", "label": "Gender", "type": "select", "options": ["Male", "Female", "Other"], "required": true},
+        {"name": "mobile_no", "label": "Mobile Number", "type": "phone", "required": true},
+        {"name": "EmailID", "label": "Email ID", "type": "email", "required": false},
+        {"name": "pincode", "label": "PIN Code", "type": "text", "required": true, "help": "Used to determine premium zone"},
+        {"name": "Occupation", "label": "Occupation", "type": "text", "required": true}
+      ]
+    },
+    {
+      "title": "Plan Selection",
+      "fields": [
+        {"name": "plan", "label": "Plan", "type": "select", "options": ["Sentinel Essential", "Sentinel Family Shield", "Sentinel Senior Care"], "required": true},
+        {"name": "sum_insured", "label": "Sum Insured (Rs)", "type": "select", "options": ["300000", "500000", "750000", "1000000", "1500000", "2500000"], "required": true},
+        {"name": "PolicyTerm", "label": "Policy Term", "type": "select", "options": ["1 year", "2 years", "3 years"], "required": true},
+        {"name": "payment_frequency", "label": "Premium Payment Frequency", "type": "select", "options": ["Annual", "Half-yearly", "Quarterly", "Monthly"], "required": true},
+        {"name": "riders", "label": "Optional Riders", "type": "multiselect", "options": ["Critical Illness", "Hospital Cash", "Co-pay Waiver", "OPD Cover"], "required": false}
+      ]
+    },
+    {
+      "title": "Insured Members",
+      "repeatable": true,
+      "fields": [
+        {"name": "member_name", "label": "Member Name", "type": "text", "required": true},
+        {"name": "Relationship", "label": "Relationship to Proposer", "type": "select", "options": ["Self", "Spouse", "Son", "Daughter", "Father", "Mother"], "required": true},
+        {"name": "DateOfBirth", "label": "Date of Birth", "type": "date", "required": true},
+        {"name": "height_cm", "label": "Height (cm)", "type": "number", "required": true},
+        {"name": "weight_kg", "label": "Weight (kg)", "type": "number", "required": true}
+      ]
+    },
+    {
+      "title": "Health Declaration",
+      "fields": [
+        {"name": "q_ped", "label": "Has any member been diagnosed with, or treated for, any illness in the last 48 months (diabetes, hypertension, thyroid, asthma, heart disease, cancer, kidney disease, etc.)?", "type": "yes_no", "required": true},
+        {"name": "q_ped_details", "label": "If yes, give details: condition, year of diagnosis, current medication", "type": "textarea", "required": false},
+        {"name": "q_hospitalised", "label": "Has any member been hospitalised in the last 5 years?", "type": "yes_no", "required": true},
+        {"name": "q_tobacco", "label": "Does any member use tobacco in any form?", "type": "yes_no", "required": true},
+        {"name": "q_alcohol", "label": "Does any member consume alcohol more than 3 times a week?", "type": "yes_no", "required": true},
+        {"name": "q_declined", "label": "Has any insurer declined or loaded a health proposal for any member?", "type": "yes_no", "required": true}
+      ]
+    },
+    {
+      "title": "Declaration",
+      "fields": [
+        {"name": "declaration_accept", "label": "I declare that the information above is true and complete. I understand that non-disclosure may result in rejection of claims or cancellation of the policy.", "type": "checkbox", "required": true},
+        {"name": "consent_contact", "label": "I consent to be contacted by Sentinel Health by phone, SMS, WhatsApp and email.", "type": "checkbox", "required": true}
+      ]
+    }
+  ]
+}

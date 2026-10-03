@@ -1,0 +1,101 @@
+{
+  "call_id": "Q4-replay-q1_oos",
+  "transcript": [
+    {
+      "t_start": 0.0,
+      "t_end": 12.0,
+      "speaker": "agent",
+      "text": "Hello, this is Aisha from Sentinel Health Insurance. This call is being recorded for quality and training purposes. Insurance is the subject matter of solicitation. I am calling to see if a Sentinel health plan could be a fit for you or your family — this is only a preliminary qualification, not an approval. May I have your name to begin?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 12.0,
+      "t_end": 16.18,
+      "speaker": "customer",
+      "text": "Hi I am Neha, 29, from Chennai, just myself, no conditions.",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 16.18,
+      "t_end": 18.18,
+      "speaker": "agent",
+      "text": "What is your age?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 18.18,
+      "t_end": 21.22,
+      "speaker": "customer",
+      "text": "What is the stock price of Sentinel Health?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 21.22,
+      "t_end": 32.62,
+      "speaker": "agent",
+      "text": "I do not have that information in our knowledge base, so I will not guess. I can connect you with a licensed advisor who can check and call you back.",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 32.62,
+      "t_end": 34.62,
+      "speaker": "customer",
+      "text": "Do you sell motor insurance?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 34.62,
+      "t_end": 46.019999999999996,
+      "speaker": "agent",
+      "text": "I do not have that information in our knowledge base, so I will not guess. I can connect you with a licensed advisor who can check and call you back.",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 46.019999999999996,
+      "t_end": 48.019999999999996,
+      "speaker": "customer",
+      "text": "Who is your CEO?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 48.019999999999996,
+      "t_end": 59.419999999999995,
+      "speaker": "agent",
+      "text": "I do not have that information in our knowledge base, so I will not guess. I can connect you with a licensed advisor who can check and call you back.",
+      "asr_latency_ms": 110.0
+    }
+  ],
+  "nudges": [],
+  "suppressed": [],
+  "controller": {
+    "emitted": 0,
+    "suppressed": 0,
+    "by_kind_emitted": {},
+    "by_kind_suppressed": {},
+    "suppress_reasons": {}
+  },
+  "latency": {
+    "asr": {
+      "count": 9,
+      "p50_ms": 110.0,
+      "p95_ms": 110.0,
+      "max_ms": 110.0,
+      "mean_ms": 110.0
+    },
+    "signal_extraction": {
+      "count": 9,
+      "p50_ms": 0.0,
+      "p95_ms": 0.1,
+      "max_ms": 0.1,
+      "mean_ms": 0.0
+    },
+    "e2e_chunk": {
+      "count": 2,
+      "p50_ms": 110.1,
+      "p95_ms": 110.1,
+      "max_ms": 110.1,
+      "mean_ms": 110.1
+    }
+  },
+  "agent_disclosed": true
+}

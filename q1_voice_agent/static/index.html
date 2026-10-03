@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Voice qualifier · Sunfyre</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/app.css?v=3">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">
+    <div class="mark">SF</div>
+    <div><h1>Voice qualifier</h1><small>Sentinel Health</small></div>
+  </a>
+  <nav class="nav">
+    <a href="/">Home</a>
+    <a class="active" href="/agent">Voice</a>
+    <a href="/kb">Knowledge</a>
+    <a href="/native">Locales</a>
+    <a href="/live">Live coach</a>
+  </nav>
+</header>
+<div class="split">
+  <section class="chat-pane">
+    <p class="hint">Begin a call, then <b>type</b> your replies below — this works reliably on any network. If an API key is configured, the Talk button will use Whisper for speech input. All responses are retrieved from the knowledge base.</p>
+    <div class="log" id="log"></div>
+    <div class="composer">
+      <button id="start">Start call</button>
+      <button id="talk" class="secondary" disabled>Talk</button>
+      <input id="text" placeholder="Type a customer reply…" disabled>
+      <button id="send" disabled>Send</button>
+    </div>
+  </section>
+  <aside class="side">
+    <h2>Call</h2>
+    <div id="callmeta" class="side-card hint">Not started</div>
+    <h2>Slots</h2>
+    <div id="slots" class="side-card">—</div>
+    <h2>Qualification</h2>
+    <div id="qual" class="side-card">Incomplete</div>
+    <h2>Citations</h2>
+    <div id="cites" class="side-card hint">Grounded responses will display their source record, file, and version here.</div>
+    <h2>Live coach</h2>
+    <div id="nudges" class="side-card hint">Real-time coaching signals from the active call stream appear here.</div>
+  </aside>
+</div>
+<script>
+let callId = null;
+let whisperOn = false;
+const logEl = document.getElementById('log');
+function add(role, text) {
+  const d = document.createElement('div');
+  d.className = 'msg ' + (role === 'agent' ? 'agent' : 'cust');
+  d.innerHTML = `<div class="who">${role === 'agent' ? 'Agent' : 'You'}</div>${text}`;
+  logEl.appendChild(d);
+  logEl.scrollTop = logEl.scrollHeight;
+}
+function playTts(text) {
+  const url = '/agent/tts?lang=en&text=' + encodeURIComponent(text);
+  const a = new Audio(url);
+  a.play().catch(() => {});
+}
+function renderState(data) {
+  document.getElementById('callmeta').textContent = `call ${data.call_id || callId} · ended=${!!data.ended} · lead=${data.lead_id || '—'}`;
+  const s = data.slots || {};
+  document.getElementById('slots').innerHTML = Object.keys(s).length
+    ? Object.entries(s).map(([k,v]) => `<span class="pill">${k}: ${v}</span>`).join('') : '—';
+  const q = data.qualification || {};
+  const cls = q.status === 'Qualified' ? 'ok' : (q.status === 'Not Eligible' ? 'bad' : 'warn');
+  document.getElementById('qual').innerHTML = q.status
+    ? `<span class="pill ${cls}">${q.status}</span> ${q.plan || ''} <div class="hint">${(q.reasons||[]).join('; ')}</div>`
+    : 'Incomplete';
+  const cites = (data.citations && data.citations.length) ? data.citations
+    : ((data.retrieval||{}).hits||[]).map(h => h.citation);
+  document.getElementById('cites').innerHTML = (cites||[]).map(c => `<div class="cite">${c}</div>`).join('') || '—';
+  const nudges = data.nudges || [];
+  document.getElementById('nudges').innerHTML = nudges.length
+    ? nudges.map(n => `<div class="cite"><b>${n.kind}</b> (${n.confidence}) ${n.text}</div>`).join('')
+    : 'No coaching signals yet.';
+}
+document.getElementById('start').onclick = async () => {
+  const r = await fetch('/agent/start', {method:'POST'});
+  const data = await r.json();
+  callId = data.call_id;
+  whisperOn = !!data.whisper;
+  logEl.innerHTML = '';
+  add('agent', data.reply);
+  if (whisperOn) add('agent', 'Voice input is active. Click Talk, speak, then click Talk again to submit.');
+  else add('agent', 'No API key detected — use the text input below. Talk may not work on restricted networks.');
+  playTts(data.reply);
+  renderState(data);
+  document.getElementById('text').disabled = false;
+  document.getElementById('send').disabled = false;
+  document.getElementById('talk').disabled = false;
+};
+async function sendUtterance(t) {
+  t = (t || '').trim();
+  if (!t || !callId) return;
+  add('customer', t);
+  try {
+    const r = await fetch('/agent/turn-text', {
+      method:'POST', headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({call_id: callId, text: t})
+    });
+    if (!r.ok) {
+      add('agent', 'Error communicating with server (' + r.status + '). Please try again.');
+      return;
+    }
+    const data = await r.json();
+    const reply = data.reply || data.detail || 'I did not catch that.';
+    add('agent', typeof reply === 'string' ? reply : JSON.stringify(reply));
+    playTts(typeof reply === 'string' ? reply : '');
+    renderState(data.reply ? data : {call_id: callId});
+  } catch (err) {
+    add('agent', 'Network error. Please try again.');
+  }
+}
+async function sendText() {
+  const inp = document.getElementById('text');
+  const t = inp.value.trim();
+  inp.value = '';
+  await sendUtterance(t);
+}
+document.getElementById('send').onclick = sendText;
+document.getElementById('text').addEventListener('keydown', e => { if (e.key==='Enter') sendText(); });
+
+const talk = document.getElementById('talk');
+let listening = false;
+let rec = null;
+let draft = '';
+let retriedLang = false;
+let mediaRec = null;
+let chunks = [];
+
+function SpeechEngine() { return window.SpeechRecognition || window.webkitSpeechRecognition; }
+function stopListen(sendDraft) {
+  listening = false;
+  talk.textContent = 'Talk';
+  try { if (rec) rec.stop(); } catch (e) {}
+  rec = null;
+  if (sendDraft && draft.trim()) sendUtterance(draft.trim());
+  draft = '';
+}
+function startListen(lang) {
+  const SR = SpeechEngine();
+  if (!SR) { add('agent', 'This browser does not support speech recognition. Please type your response.'); return; }
+  rec = new SR();
+  rec.lang = lang; rec.interimResults = true; rec.continuous = true;
+  listening = true; draft = '';
+  talk.textContent = 'Listening… click to send';
+  rec.onresult = (e) => {
+    let said = '';
+    for (let i = 0; i < e.results.length; i++) said += e.results[i][0].transcript;
+    draft = said.trim();
+  };
+  rec.onerror = (e) => {
+    const err = e.error || '';
+    if (err === 'aborted' || err === 'no-speech') return;
+    if (err === 'network' && !retriedLang) { retriedLang = true; try { rec.stop(); } catch (x) {} startListen('en-US'); return; }
+    listening = false; talk.textContent = 'Talk'; rec = null;
+    if (draft.trim()) { sendUtterance(draft.trim()); draft = ''; return; }
+    if (err === 'network' || err === 'service-not-allowed')
+      add('agent', 'Speech service unavailable on this network. Please type your response instead.');
+    else if (err === 'not-allowed') add('agent', 'Microphone access was denied. Please type your response.');
+    else add('agent', 'Speech input failed (' + err + '). Please type instead.');
+  };
+  rec.onend = () => {
+    if (!listening) return;
+    listening = false; talk.textContent = 'Talk';
+    if (draft.trim()) sendUtterance(draft.trim());
+    draft = ''; rec = null;
+  };
+  try { rec.start(); } catch (e) { listening = false; talk.textContent = 'Talk'; add('agent', 'Unable to start microphone.'); }
+}
+talk.onclick = async () => {
+  if (whisperOn) {
+    if (listening) {
+      listening = false; talk.textContent = 'Talk';
+      if (mediaRec && mediaRec.state !== 'inactive') mediaRec.stop();
+      return;
+    }
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({audio: true});
+      chunks = [];
+      mediaRec = new MediaRecorder(stream);
+      mediaRec.ondataavailable = e => { if (e.data.size) chunks.push(e.data); };
+      mediaRec.onstop = async () => {
+        stream.getTracks().forEach(t => t.stop());
+        const blob = new Blob(chunks, {type: mediaRec.mimeType || 'audio/webm'});
+        const fd = new FormData();
+        fd.append('call_id', callId);
+        fd.append('audio', blob, (mediaRec.mimeType || '').includes('mp4') ? 'clip.mp4' : 'clip.webm');
+        try {
+          const r = await fetch('/agent/turn-audio', {method: 'POST', body: fd});
+          const data = await r.json();
+          if (data.asr_text) add('customer', data.asr_text);
+          const reply = data.reply || 'I did not catch that.';
+          add('agent', reply); playTts(reply); renderState(data);
+        } catch (err) {
+          add('agent', 'Audio upload failed. Please type your reply instead.');
+        }
+      };
+      mediaRec.start(); listening = true;
+      talk.textContent = 'Listening… click to send';
+    } catch (e) { add('agent', 'Microphone access was denied. Please type your response.'); }
+    return;
+  }
+  if (listening) { stopListen(true); return; }
+  retriedLang = false; startListen('en-IN');
+};
+</script>
+</body>
+</html>

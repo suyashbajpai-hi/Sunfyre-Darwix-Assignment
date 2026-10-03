@@ -1,0 +1,451 @@
+{
+  "summary": {
+    "total": 22,
+    "correct": 20,
+    "partially_correct": 2,
+    "incorrect": 0,
+    "mode": "bm25"
+  },
+  "results": [
+    {
+      "question": "What is the difference between Family Shield and Essential?",
+      "intent": "product",
+      "market": "IN",
+      "retrieved_record": "kb_in_product_021",
+      "retrieved_title": "Plans > Our Health Insurance Plans > Plan Comparison",
+      "retrieved_excerpt": "Type - Essential: Individual; Family Shield: Family floater; Senior Care: Individual / 2-adult floater.\nEntry age - Essential: 18-65; Family Shield: 18-65 (children 91 days-25 years); Senior Care: 61-80.\nSum insured (Rs)...",
+      "source": "website/plans.html § table",
+      "confidence": 0.673,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: family, shield, essential, comparison; bm25=17.86",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_in_product_021",
+        "kb_in_product_015",
+        "kb_in_faq_001"
+      ]
+    },
+    {
+      "question": "Does Senior Care have a co-pay?",
+      "intent": "product",
+      "market": "IN",
+      "retrieved_record": "kb_in_faq_001",
+      "retrieved_title": "FAQ > Frequently Asked Questions > Policy Servicing > Is There A Co-pay?",
+      "retrieved_excerpt": "Essential has a 10% co-payment on every claim. Family Shield has no co-payment unless a member was 61 or older at entry, in which case 20% applies to that member. Senior Care has a 20% co-payment, which can be removed wi...",
+      "source": "website/faq.html § Is There A Co-pay?",
+      "confidence": 0.908,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: senior, care, co-payment; bm25=8.85",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_in_faq_001",
+        "kb_in_customer_service_005",
+        "kb_in_product_020"
+      ]
+    },
+    {
+      "question": "How much does Family Shield cost for two adults and one child?",
+      "intent": "faq",
+      "market": "IN",
+      "retrieved_record": "kb_in_premium_pricing_006",
+      "retrieved_title": "FAQ > Frequently Asked Questions > Premiums And Payment > How Much Does It Cost?",
+      "retrieved_excerpt": "Premium depends on plan, age of the oldest member, sum insured, city tier and any loadings. For example, a 30-year-old buying Sentinel Essential with Rs 5 lakh sum insured pays about Rs 7,200 a year plus GST. A family of...",
+      "source": "website/faq.html § How Much Does It Cost?",
+      "confidence": 0.916,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: family, shield, cost, two, adult, one, child, premium; bm25=20.36",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_in_premium_pricing_006",
+        "kb_in_product_019",
+        "kb_in_premium_pricing_002"
+      ]
+    },
+    {
+      "question": "What is the waiting period for pre-existing diseases?",
+      "intent": "policy",
+      "market": "IN",
+      "retrieved_record": "kb_in_waiting_periods_004",
+      "retrieved_title": "FAQ > Frequently Asked Questions > Buying A Policy > What Is A Pre-existing Disease (PED)?",
+      "retrieved_excerpt": "A pre-existing disease is any condition, ailment or injury that was diagnosed, or for which medical advice or treatment was received, within 48 months before your first policy with us. pre-existing disease are covered af...",
+      "source": "website/faq.html § What Is A Pre-existing Disease (PED)?",
+      "confidence": 0.962,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: waiting, period, pre-existing, disease; bm25=10.71",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_in_waiting_periods_004",
+        "kb_in_eligibility_underwriting_005",
+        "kb_in_waiting_periods_002"
+      ]
+    },
+    {
+      "question": "What happens if I miss a premium payment?",
+      "intent": "policy",
+      "market": "IN",
+      "retrieved_record": "kb_in_premium_pricing_008",
+      "retrieved_title": "FAQ > Frequently Asked Questions > Premiums And Payment > What Happens If I Miss A Premium Payment?",
+      "retrieved_excerpt": "You get a grace period of 30 days (15 days for monthly mode) to pay without losing continuity benefits. If you do not pay within the grace period, the policy lapses and any claim arising during the lapse period is not pa...",
+      "source": "website/faq.html § What Happens If I Miss A Premium Payment?",
+      "confidence": 1.0,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: happen, miss, premium, payment; bm25=19.46",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_in_premium_pricing_008",
+        "kb_in_premium_pricing_007",
+        "kb_in_premium_pricing_009"
+      ]
+    },
+    {
+      "question": "Is maternity covered and after how long?",
+      "intent": "policy",
+      "market": "IN",
+      "retrieved_record": "kb_in_waiting_periods_003",
+      "retrieved_title": "Sentinel Family Shield - Policy Wording > Waiting Periods > Maternity Waiting Period: 24 Months.",
+      "retrieved_excerpt": "C.4 Maternity waiting period: 24 months. C.5 Waiting periods already served under a previous indemnity health policy are credited on portability as per IRDAI guidelines....",
+      "source": "docs/policy_wording_family_shield.pdf § page 2",
+      "confidence": 0.621,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: maternity, waiting, period; bm25=17.64",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_in_waiting_periods_003",
+        "kb_in_objection_handling_008",
+        "kb_in_customer_service_007"
+      ]
+    },
+    {
+      "question": "I have controlled type 2 diabetes, can I get a policy?",
+      "intent": "qualification",
+      "market": "IN",
+      "retrieved_record": "kb_in_eligibility_underwriting_008",
+      "retrieved_title": "FAQ > Frequently Asked Questions > Buying A Policy > Have Diabetes. Can I Still Buy?",
+      "retrieved_excerpt": "Yes, in most cases. Controlled Type 2 diabetes (HbA1c below 8) is accepted with a 36-month pre-existing disease waiting period and, depending on age, a premium loading of 10% to 25%. Insulin-dependent diabetes or diabete...",
+      "source": "website/faq.html § Have Diabetes. Can I Still Buy?",
+      "confidence": 1.0,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: controlled, type, diabete, policy; bm25=13.87",
+      "verdict": "partially correct",
+      "verdict_reason": "evidence in top-3 but not ranked first",
+      "top3": [
+        "kb_in_eligibility_underwriting_008",
+        "kb_in_eligibility_underwriting_005",
+        "kb_in_objection_handling_007"
+      ]
+    },
+    {
+      "question": "Can my father who is 82 years old buy a policy?",
+      "intent": "qualification",
+      "market": "IN",
+      "retrieved_record": "kb_in_customer_service_006",
+      "retrieved_title": "Sentinel Health - Customer Service Log Export (Jan 2024)",
+      "retrieved_excerpt": "Ticket #CS-24-0163\nCustomer: Imran Sheikh, [PHONE]\nPolicy: none yet (prospect)\nIssue: Asked whether his father aged 82 can be covered.\nResolution: Senior Care entry age is 61 to 80. Not eligible for a new policy at 82. S...",
+      "source": "docs/customer_service_log.txt § ",
+      "confidence": 0.765,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: father, 82, policy, senior, care, age; bm25=16.53",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_in_customer_service_006",
+        "kb_in_product_015",
+        "kb_in_product_021"
+      ]
+    },
+    {
+      "question": "Do I need a medical test if I am 50?",
+      "intent": "qualification",
+      "market": "IN",
+      "retrieved_record": "kb_in_eligibility_underwriting_007",
+      "retrieved_title": "FAQ > Frequently Asked Questions > Buying A Policy > Do I Need A Medical Test Before Buying?",
+      "retrieved_excerpt": "If you are 45 or younger and have no pre-existing disease, no medical test is required - you can buy on the basis of your health declaration. If you are above 45, or you declare any pre-existing disease such as diabetes,...",
+      "source": "website/faq.html § Do I Need A Medical Test Before Buying?",
+      "confidence": 0.669,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: medical, test; bm25=8.71",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_in_eligibility_underwriting_007",
+        "kb_in_eligibility_underwriting_004",
+        "kb_in_premium_pricing_010"
+      ]
+    },
+    {
+      "question": "Customer says it is too expensive, how should I respond?",
+      "intent": "objection",
+      "market": "IN",
+      "retrieved_record": "kb_in_objection_handling_002",
+      "retrieved_title": "Objection Handling Playbook - Health Insurance Tele-Sales > Objection: \"It Is Too Expensive.\"",
+      "retrieved_excerpt": "Approved response: Acknowledge, then reframe to daily cost and risk. \"I understand - let me put it in perspective. For a 30-year-old, Sentinel Essential with 5 lakh cover costs around Rs 7,200 a year, which is about Rs 2...",
+      "source": "docs/objection_handling_playbook.md § Objection: \"It Is Too Expensive.\"",
+      "confidence": 0.581,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: too, expensive; bm25=10.60",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_in_objection_handling_002",
+        "kb_in_objection_handling_008",
+        "kb_in_customer_service_007"
+      ]
+    },
+    {
+      "question": "Customer already has insurance from employer",
+      "intent": "objection",
+      "market": "IN",
+      "retrieved_record": "kb_in_objection_handling_003",
+      "retrieved_title": "Objection Handling Playbook - Health Insurance Tele-Sales > Objection: \"I Already Have Cover From My Employer.\"",
+      "retrieved_excerpt": "Approved response: \"That is a great start. Employer cover ends when you change jobs or retire, and most group plans are Rs 3 to 5 lakh shared across the family. A personal policy bought while you are young keeps waiting ...",
+      "source": "docs/objection_handling_playbook.md § Objection: \"I Already Have Cover From My Employer.\"",
+      "confidence": 1.0,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: customer, already, insurance, employer; bm25=15.07",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_in_objection_handling_003",
+        "kb_in_objection_handling_008",
+        "kb_in_objection_handling_001"
+      ]
+    },
+    {
+      "question": "Insurance companies always reject claims",
+      "intent": "objection",
+      "market": "IN",
+      "retrieved_record": "kb_in_objection_handling_005",
+      "retrieved_title": "Objection Handling Playbook - Health Insurance Tele-Sales > Objection: \"Insurance Companies Always Reject Claims.\"",
+      "retrieved_excerpt": "Approved response: \"I understand the concern. Sentinel's claim settlement ratio for FY 2023-24 was 96.4%, and we process claims in-house without a TPA. The main reason claims are rejected anywhere is non-disclosure of a ...",
+      "source": "docs/objection_handling_playbook.md § Objection: \"Insurance Companies Always Reject Claims.\"",
+      "confidence": 1.0,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: insurance, company, alway, reject, claim, rejected, non-disclosure; bm25=26.07",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_in_objection_handling_005",
+        "kb_in_claims_006",
+        "kb_in_policy_terms_005"
+      ]
+    },
+    {
+      "question": "Which disclosures are mandatory at the start of a sales call?",
+      "intent": "compliance",
+      "market": "IN",
+      "retrieved_record": "kb_in_compliance_002",
+      "retrieved_title": "Mandatory Call Disclosures & Conduct Rules (Compliance) > Mandatory Disclosures",
+      "retrieved_excerpt": "1. **Identity & purpose** (start of call): State the agent's name, that the call is from Sentinel Health Insurance, and the purpose of the call.\n2. **Call recording consent** (start of call): \"This call is being recorded...",
+      "source": "docs/compliance_disclosures.md § Mandatory Disclosures",
+      "confidence": 0.84,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: disclosure, mandatory, start, call; bm25=16.42",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_in_compliance_002",
+        "kb_in_compliance_004",
+        "kb_in_compliance_005"
+      ]
+    },
+    {
+      "question": "Can I port my existing policy from another insurer?",
+      "intent": "faq",
+      "market": "IN",
+      "retrieved_record": "kb_in_policy_terms_006",
+      "retrieved_title": "FAQ > Frequently Asked Questions > Policy Servicing > Can I Port My Existing Policy To Sentinel?",
+      "retrieved_excerpt": "Yes. Under IRDAI portability rules you can move to Sentinel at renewal time and carry forward the waiting periods you have already served with your previous insurer. Apply at least 45 days before your current policy expi...",
+      "source": "website/faq.html § Can I Port My Existing Policy To Sentinel?",
+      "confidence": 0.862,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: port, existing, policy, insurer, portability; bm25=19.33",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_in_policy_terms_006",
+        "kb_in_objection_handling_008",
+        "kb_in_waiting_periods_003"
+      ]
+    },
+    {
+      "question": "Is cosmetic surgery covered?",
+      "intent": "policy",
+      "market": "IN",
+      "retrieved_record": "kb_in_exclusions_001",
+      "retrieved_title": "Sentinel Family Shield - Policy Wording > Exclusions > Cosmetic Or Plastic Surgery Unless For Reconstruction Following An Accident, Burn Or",
+      "retrieved_excerpt": "D.1 Cosmetic or plastic surgery unless for reconstruction following an accident, burn or cancer....",
+      "source": "docs/policy_wording_family_shield.pdf § page 2",
+      "confidence": 0.845,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: cosmetic, surgery; bm25=12.55",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_in_exclusions_001",
+        "kb_in_exclusions_010",
+        "kb_in_claims_006"
+      ]
+    },
+    {
+      "question": "What is the stock price of Sentinel Health?",
+      "intent": "out_of_scope",
+      "market": "IN",
+      "retrieved_record": "kb_in_compliance_003",
+      "retrieved_title": "Mandatory Call Disclosures & Conduct Rules (Compliance) > Prohibited Statements (risky Statements)",
+      "retrieved_excerpt": "Agents and voice bots must NOT:\n- say or imply cover is \"guaranteed\", \"approved\", \"100% covered\", or that there are \"no exclusions\";\n- promise claim settlement, a settlement timeline shorter than the documented SLA, or \"...",
+      "source": "docs/compliance_disclosures.md § Prohibited Statements (risky Statements)",
+      "confidence": 0.29,
+      "tier": "low",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: price, premium; bm25=4.51",
+      "verdict": "correct",
+      "verdict_reason": "low confidence -> agent will say information is unavailable",
+      "top3": [
+        "kb_in_compliance_003",
+        "kb_in_premium_pricing_005",
+        "kb_in_premium_pricing_009"
+      ]
+    },
+    {
+      "question": "Who is the CEO of Sentinel?",
+      "intent": "out_of_scope",
+      "market": "IN",
+      "retrieved_record": "kb_in_customer_service_001",
+      "retrieved_title": "Sentinel Health - Customer Service Log Export (Jan 2024)",
+      "retrieved_excerpt": "SENTINEL HEALTH - CUSTOMER SERVICE LOG EXPORT (Jan 2024)...",
+      "source": "docs/customer_service_log.txt § ",
+      "confidence": 0.021,
+      "tier": "low",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: sentinel; bm25=0.21",
+      "verdict": "correct",
+      "verdict_reason": "low confidence -> agent will say information is unavailable",
+      "top3": [
+        "kb_in_customer_service_001",
+        "kb_in_partnership_001",
+        "kb_in_policy_terms_001"
+      ]
+    },
+    {
+      "question": "Do you sell motor insurance?",
+      "intent": "out_of_scope",
+      "market": "IN",
+      "retrieved_record": "kb_in_company_001",
+      "retrieved_title": "Sentinel Health Insurance > Health Cover That Actually Pays When It Matters > About Sentinel Health Insurance",
+      "retrieved_excerpt": "Sentinel Health Insurance Company Ltd. is a standalone health insurer licensed by the Insurance Regulatory and Development Authority of India (IRDAI), registration no. 162. Our head office is in Pune, Maharashtra and we ...",
+      "source": "website/index.html § About Sentinel Health Insurance",
+      "confidence": 0.142,
+      "tier": "low",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: insurance; bm25=2.15",
+      "verdict": "correct",
+      "verdict_reason": "low confidence -> agent will say information is unavailable",
+      "top3": [
+        "kb_in_company_001",
+        "kb_in_claims_007",
+        "kb_in_objection_handling_005"
+      ]
+    },
+    {
+      "question": "Magkano ang premium for ShieldLife Term Protect one million?",
+      "intent": "product",
+      "market": "PH",
+      "retrieved_record": "kb_ph_product_001",
+      "retrieved_title": "ShieldLife × Banco Isla - Product Guide (Philippines) > ShieldLife Term Protect",
+      "retrieved_excerpt": "Term life with level premium. Coverage 5, 10, 15 or 20 years, or up to age 65. Sum insured ₱500,000 to ₱10,000,000. Medical exam required above ₱3,000,000 or age 50. No cash value. If the policy **lapses** after the 31-d...",
+      "source": "products.md § ShieldLife Term Protect",
+      "confidence": 0.632,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: premium, shieldlife, term, protect; bm25=14.45",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_ph_product_001",
+        "kb_ph_objection_handling_002",
+        "kb_ph_objection_handling_007"
+      ]
+    },
+    {
+      "question": "What happens if the policy lapses in the Philippines?",
+      "intent": "policy",
+      "market": "PH",
+      "retrieved_record": "kb_ph_product_003",
+      "retrieved_title": "ShieldLife × Banco Isla - Product Guide (Philippines) > Bancassurance Conduct",
+      "retrieved_excerpt": "- Face-to-face or recorded call from a licensed advisor / AI qualifier is a solicitation.\n- Customer may mix English and Filipino (Taglish). Answer in the same mix. Keep industry words: premium, policy, beneficiary, ride...",
+      "source": "products.md § Bancassurance Conduct",
+      "confidence": 0.606,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: policy, lapse, philippine; bm25=7.56",
+      "verdict": "partially correct",
+      "verdict_reason": "evidence in top-3 but not ranked first",
+      "top3": [
+        "kb_ph_product_003",
+        "kb_ph_product_001",
+        "kb_ph_company_001"
+      ]
+    },
+    {
+      "question": "Berapa denda keterlambatan cicilan MitraDana?",
+      "intent": "policy",
+      "market": "ID",
+      "retrieved_record": "kb_id_premium_pricing_001",
+      "retrieved_title": "MitraDana Multifinance - Produk & Aturan Cicilan (Indonesia) > DanaCepat (pembiayaan Dana Tunai)",
+      "retrieved_excerpt": "Pinjaman tanpa agunan. Plafon Rp 5 juta - Rp 50 juta. Tenor 6, 12, 18, 24 bulan. Bunga flat sesuai rate card cabang. **DP** tidak berlaku (karena bukan kendaraan). **Cicilan / angsuran** jatuh tempo setiap tanggal kontra...",
+      "source": "produk.md § DanaCepat (pembiayaan Dana Tunai)",
+      "confidence": 0.643,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: denda, keterlambatan, cicilan, mitradana, angsuran; bm25=16.52",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_id_premium_pricing_001",
+        "kb_id_faq_014",
+        "kb_id_faq_003"
+      ]
+    },
+    {
+      "question": "Berapa DP MotorPlus bekas?",
+      "intent": "product",
+      "market": "ID",
+      "retrieved_record": "kb_id_faq_013",
+      "retrieved_title": "MitraDana Multifinance - Produk & Aturan Cicilan (Indonesia) > MotorPlus",
+      "retrieved_excerpt": "Pembiayaan motor baru atau bekas (maks. 8 tahun). DP mulai 10% (baru) / 20% (bekas). Tenor 12-48 bulan. BPKB dipegang MitraDana sampai lunas. Asuransi kendaraan wajib....",
+      "source": "produk.md § MotorPlus",
+      "confidence": 0.742,
+      "tier": "high",
+      "mode": "bm25",
+      "relevance_explanation": "matched terms: dp, motorplu, beka; bm25=15.62",
+      "verdict": "correct",
+      "verdict_reason": "top-1 record contains expected evidence",
+      "top3": [
+        "kb_id_faq_013",
+        "kb_id_faq_002",
+        "kb_id_faq_003"
+      ]
+    }
+  ]
+}

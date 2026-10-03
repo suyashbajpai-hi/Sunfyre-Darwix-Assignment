@@ -1,0 +1,71 @@
+{
+  "id": "id_colloquial_denda",
+  "title": "ID colloquial + denda objection + mixed loanwords",
+  "market": "ID",
+  "call_id": "C-BB860300",
+  "slots": {
+    "age": "29",
+    "city": "Bandung",
+    "callback_time": "hubungi aku setelah gajian tanggal 10."
+  },
+  "qualification": {
+    "status": "Incomplete",
+    "plan": null,
+    "reasons": [
+      "still need: name"
+    ],
+    "zone": null,
+    "ppme_required": false,
+    "disclaimers": []
+  },
+  "lead_id": null,
+  "end_reason": null,
+  "turns": [
+    {
+      "role": "agent",
+      "text": "Selamat siang, Bu, Pak. Saya Sari dari MitraDana. Panggilan ini direkam untuk kualitas layanan. Saya hubungi terkait pembiayaan MitraDana — cek kelayakan atau pengingat cicilan, bukan penagihan kasar. Boleh minta nama Bapak/Ibu?"
+    },
+    {
+      "role": "customer",
+      "text": "Halo Mbak, aku Rina, 29 tahun, di Bandung."
+    },
+    {
+      "role": "agent",
+      "text": "Siapa nama Bapak/Ibu?",
+      "citations": [],
+      "confidence": 0.244,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Cicilannya telat, dendanya kejebak mahal banget dong. DP MotorPlus bisa diturunin?"
+    },
+    {
+      "role": "agent",
+      "text": "Disetujui: \"Saya paham, Pak/Bu. Denda 0,5% per hari, max 3% sebulan, itu sesuai kontrak. Kalau Bapak bayar hari ini sebelum pukul 20.00, kita kunci denda yang sudah jalan saja - tidak nambah malam ini. Kalau masih berat, saya bisa minta petugas cabang tawarkan reschedule.\" Jangan: hapus denda sendiri. Siapa nama Bapak/Ibu?",
+      "citations": [
+        "[kb_id_exclusions_001 | MitraDana - Keberatan, FAQ, Dan Eskalasi > Keberatan: \"Dendanya Kejebak, Mahal.\" | keberatan_faq.md § Keberatan: \"Dendanya Kejebak, Mahal.\" | v1.0]",
+        "[kb_id_faq_013 | MitraDana Multifinance - Produk & Aturan Cicilan (Indonesia) > MotorPlus | produk.md § MotorPlus | v1.0]",
+        "[kb_id_faq_002 | MitraDana - Keberatan, FAQ, Dan Eskalasi > Keberatan: \"DP-nya Terlalu Tinggi.\" | keberatan_faq.md § Keberatan: \"DP-nya Terlalu Tinggi.\" | v1.0]"
+      ],
+      "confidence": 0.559,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Ya udah, hubungi aku setelah gajian tanggal 10."
+    },
+    {
+      "role": "agent",
+      "text": "Siapa nama Bapak/Ibu?",
+      "citations": [
+        "[kb_id_faq_003 | MitraDana - Keberatan, FAQ, Dan Eskalasi > Keberatan: \"Nanti Saja, Gaji Belum Masuk.\" | keberatan_faq.md § Keberatan: \"Nanti Saja, Gaji Belum Masuk.\" | v1.0]",
+        "[kb_id_faq_002 | MitraDana - Keberatan, FAQ, Dan Eskalasi > Keberatan: \"DP-nya Terlalu Tinggi.\" | keberatan_faq.md § Keberatan: \"DP-nya Terlalu Tinggi.\" | v1.0]",
+        "[kb_id_faq_011 | MitraDana - Kepatuhan Panggilan > Data Yang Boleh Diambil | kepatuhan.md § Data Yang Boleh Diambil | v1.0]"
+      ],
+      "confidence": 0.635,
+      "action": null
+    }
+  ],
+  "transcript_path": "D:\\DarwixAI Assignment\\data\\transcripts\\id_colloquial_denda.json"
+}

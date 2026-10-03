@@ -1,0 +1,68 @@
+{
+  "id": "id_jawa_accent_escalation",
+  "title": "ID Yogyakarta phrasing (regional) + human ask",
+  "market": "ID",
+  "call_id": "C-4E6EFB0C",
+  "slots": {
+    "age": "47"
+  },
+  "qualification": {
+    "status": "Incomplete",
+    "plan": null,
+    "reasons": [
+      "still need: name"
+    ],
+    "zone": null,
+    "ppme_required": false,
+    "disclaimers": []
+  },
+  "lead_id": "LD-60063C25",
+  "end_reason": "escalated",
+  "turns": [
+    {
+      "role": "agent",
+      "text": "Selamat siang, Bu, Pak. Saya Sari dari MitraDana. Panggilan ini direkam untuk kualitas layanan. Saya hubungi terkait pembiayaan MitraDana — cek kelayakan atau pengingat cicilan, bukan penagihan kasar. Boleh minta nama Bapak/Ibu?"
+    },
+    {
+      "role": "customer",
+      "text": "Nggih Mbak, kula Pak Slamet, umur 47, Yogyakarta."
+    },
+    {
+      "role": "agent",
+      "text": "Siapa nama Bapak/Ibu?",
+      "citations": [
+        "[kb_id_faq_014 | MitraDana Multifinance - Produk & Aturan Cicilan (Indonesia) > Regional (Jawa / Yogyakarta) | produk.md § Regional (Jawa / Yogyakarta) | v1.0]",
+        "[kb_id_faq_006 | MitraDana - Keberatan, FAQ, Dan Eskalasi > Nada Jawa | keberatan_faq.md § Nada Jawa | v1.0]"
+      ],
+      "confidence": 0.508,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Monggo dicek tenor MobilPlus kula, jatuh tempo kapan, angsuran berapa."
+    },
+    {
+      "role": "agent",
+      "text": "Siapa nama Bapak/Ibu?",
+      "citations": [
+        "[kb_id_faq_006 | MitraDana - Keberatan, FAQ, Dan Eskalasi > Nada Jawa | keberatan_faq.md § Nada Jawa | v1.0]",
+        "[kb_id_faq_014 | MitraDana Multifinance - Produk & Aturan Cicilan (Indonesia) > Regional (Jawa / Yogyakarta) | produk.md § Regional (Jawa / Yogyakarta) | v1.0]",
+        "[kb_id_exclusions_003 | MitraDana Multifinance - Produk & Aturan Cicilan (Indonesia) > Pengingat Jatuh Tempo (bukan Teror) | produk.md § Pengingat Jatuh Tempo (bukan Teror) | v1.0]"
+      ],
+      "confidence": 0.634,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Kula nyuwun ngomong kalih petugas cabang, nggih."
+    },
+    {
+      "role": "agent",
+      "text": "Baik, saya alihkan ke petugas. Kapan Bapak/Ibu bisa dihubungi kembali?",
+      "citations": [],
+      "confidence": null,
+      "action": "escalate"
+    }
+  ],
+  "transcript_path": "D:\\DarwixAI Assignment\\data\\transcripts\\id_jawa_accent_escalation.json"
+}

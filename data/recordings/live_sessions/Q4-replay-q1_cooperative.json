@@ -1,0 +1,129 @@
+{
+  "call_id": "Q4-replay-q1_cooperative",
+  "transcript": [
+    {
+      "t_start": 0.0,
+      "t_end": 12.0,
+      "speaker": "agent",
+      "text": "Hello, this is Aisha from Sentinel Health Insurance. This call is being recorded for quality and training purposes. Insurance is the subject matter of solicitation. I am calling to see if a Sentinel health plan could be a fit for you or your family — this is only a preliminary qualification, not an approval. May I have your name to begin?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 12.0,
+      "t_end": 14.280000000000001,
+      "speaker": "customer",
+      "text": "Hi, my name is Rohan Mehta.",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 14.280000000000001,
+      "t_end": 16.28,
+      "speaker": "agent",
+      "text": "What is your age?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 16.28,
+      "t_end": 19.700000000000003,
+      "speaker": "customer",
+      "text": "I am 34 years old, I live in Pune.",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 19.700000000000003,
+      "t_end": 25.400000000000002,
+      "speaker": "agent",
+      "text": "Who would you like to cover — just yourself, or spouse and children as well?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 25.400000000000002,
+      "t_end": 29.200000000000003,
+      "speaker": "customer",
+      "text": "I want to cover myself, my wife and one child.",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 29.200000000000003,
+      "t_end": 34.14,
+      "speaker": "agent",
+      "text": "Any declared health conditions I should note, such as diabetes or blood pressure?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 34.14,
+      "t_end": 36.8,
+      "speaker": "customer",
+      "text": "No health issues, we are all healthy.",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 36.8,
+      "t_end": 48.8,
+      "speaker": "agent",
+      "text": "Based on what you have shared, preliminary status is Qualified for Family Shield. age 34 is inside 18–65; suggested plan Family Shield. Eligibility is preliminary and subject to underwriting; this is not an approval. Any premium mentioned is indicative, exclusive of 18% GST, and subject to underwriting. I can create a lead and arrange a callback with a licensed advisor. What time works for you?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 48.8,
+      "t_end": 51.839999999999996,
+      "speaker": "customer",
+      "text": "Family Shield with 10 lakh cover sounds right.",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 51.839999999999996,
+      "t_end": 63.839999999999996,
+      "speaker": "agent",
+      "text": "Based on what you have shared, preliminary status is Qualified for Family Shield. age 34 is inside 18–65; suggested plan Family Shield. Eligibility is preliminary and subject to underwriting; this is not an approval. Any premium mentioned is indicative, exclusive of 18% GST, and subject to underwriting. I can create a lead and arrange a callback with a licensed advisor. What time works for you?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 63.839999999999996,
+      "t_end": 68.02,
+      "speaker": "customer",
+      "text": "Please create the lead and call me tomorrow at 6 pm.",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 68.02,
+      "t_end": 80.02,
+      "speaker": "agent",
+      "text": "Based on what you have shared, preliminary status is Qualified for Family Shield. age 34 is inside 18–65; suggested plan Family Shield. Eligibility is preliminary and subject to underwriting; this is not an approval. Any premium mentioned is indicative, exclusive of 18% GST, and subject to underwriting. I can create a lead and arrange a callback with a licensed advisor. What time works for you?",
+      "asr_latency_ms": 110.0
+    }
+  ],
+  "nudges": [],
+  "suppressed": [],
+  "controller": {
+    "emitted": 0,
+    "suppressed": 0,
+    "by_kind_emitted": {},
+    "by_kind_suppressed": {},
+    "suppress_reasons": {}
+  },
+  "latency": {
+    "asr": {
+      "count": 13,
+      "p50_ms": 110.0,
+      "p95_ms": 110.0,
+      "max_ms": 110.0,
+      "mean_ms": 110.0
+    },
+    "signal_extraction": {
+      "count": 13,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "max_ms": 0.0,
+      "mean_ms": 0.0
+    },
+    "e2e_chunk": {
+      "count": 2,
+      "p50_ms": 110.0,
+      "p95_ms": 110.0,
+      "max_ms": 110.0,
+      "mean_ms": 110.0
+    }
+  },
+  "agent_disclosed": true
+}

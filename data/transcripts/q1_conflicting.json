@@ -1,0 +1,107 @@
+{
+  "id": "q1_conflicting",
+  "title": "Incomplete then conflicting details",
+  "call_id": "C-95D5270C",
+  "qualification": {
+    "status": "Referred",
+    "plan": null,
+    "reasons": [
+      "stated age conflicts with date of birth — do not promise eligibility; clarify or refer"
+    ],
+    "zone": "A",
+    "ppme_required": false,
+    "disclaimers": [
+      "Eligibility is preliminary and subject to underwriting."
+    ]
+  },
+  "slots": {
+    "name": "Imran",
+    "age": "40",
+    "age_conflict": "stated age 40 vs DOB year 1978 (~48)",
+    "city": "Delhi"
+  },
+  "lead_id": null,
+  "end_reason": null,
+  "flags": {
+    "unavailable": true,
+    "escalated": false,
+    "lead": false,
+    "dnc": false
+  },
+  "turns": [
+    {
+      "role": "agent",
+      "text": "Hello, this is Aisha from Sentinel Health Insurance. This call is being recorded for quality and training purposes. Insurance is the subject matter of solicitation. I am calling to see if a Sentinel health plan could be a fit for you or your family — this is only a preliminary qualification, not an approval. May I have your name to begin?"
+    },
+    {
+      "role": "customer",
+      "text": "Hello."
+    },
+    {
+      "role": "agent",
+      "text": "May I have your full name?",
+      "citations": [],
+      "confidence": 0.0,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Name is Imran."
+    },
+    {
+      "role": "agent",
+      "text": "What is your age?",
+      "citations": [
+        "[kb_in_customer_service_006 | Sentinel Health - Customer Service Log Export (Jan 2024) | docs/customer_service_log.txt | v1.0]",
+        "[kb_in_forms_003 | Health Insurance Proposal Form > Insured Members | forms/proposal_form.json § Insured Members | v1.0]",
+        "[kb_in_forms_001 | Health Insurance Proposal Form > Proposer Details | forms/proposal_form.json § Proposer Details | v1.0]"
+      ],
+      "confidence": 0.563,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "I am 40 but my date of birth is 1978."
+    },
+    {
+      "role": "agent",
+      "text": "Which city are you based in?",
+      "citations": [
+        "[kb_in_forms_003 | Health Insurance Proposal Form > Insured Members | forms/proposal_form.json § Insured Members | v1.0]",
+        "[kb_in_forms_001 | Health Insurance Proposal Form > Proposer Details | forms/proposal_form.json § Proposer Details | v1.0]",
+        "[kb_in_eligibility_underwriting_001 | Sentinel Family Shield - Policy Wording > Exclusions > Obesity And Weight-control Treatment Unless BMI >= 40 Or >= 35 With Co-morbidities. | docs/policy_wording_family_shield.pdf § page 2 | v1.0]"
+      ],
+      "confidence": 0.518,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "I live in Delhi."
+    },
+    {
+      "role": "agent",
+      "text": "Who would you like to cover — just yourself, or spouse and children as well?",
+      "citations": [
+        "[kb_in_premium_pricing_004 | Sentinel Health - Underwriting & Qualification Rules (Internal) > Geography | docs/underwriting_rules.md § Geography | v1.0]"
+      ],
+      "confidence": 0.457,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Father is 82, can he buy a policy?"
+    },
+    {
+      "role": "agent",
+      "text": "Ticket #CS-24-0163 Customer: Imran Sheikh, [PHONE] Policy: none yet (prospect) Issue: Asked whether his father aged 82 can be covered. Resolution: Senior Care entry age is 61 to 80. Not eligible for a new policy at 82. Suggested checking whether the father has an existing policy that can be ported or renewed (renewal is lifetime). Lead closed - not eligible. Who would you like to cover — just yourself, or spouse and children as well?",
+      "citations": [
+        "[kb_in_customer_service_006 | Sentinel Health - Customer Service Log Export (Jan 2024) | docs/customer_service_log.txt | v1.0]",
+        "[kb_in_product_015 | FAQ > Frequently Asked Questions > Buying A Policy > Who Can Buy A Sentinel Health Policy? | website/faq.html § Who Can Buy A Sentinel Health Policy? | v1.0]",
+        "[kb_in_eligibility_underwriting_007 | FAQ > Frequently Asked Questions > Buying A Policy > Do I Need A Medical Test Before Buying? | website/faq.html § Do I Need A Medical Test Before Buying? | v1.0]"
+      ],
+      "confidence": 0.881,
+      "action": null
+    }
+  ],
+  "transcript_path": "D:\\DarwixAI Assignment\\data\\transcripts\\q1_conflicting.json"
+}

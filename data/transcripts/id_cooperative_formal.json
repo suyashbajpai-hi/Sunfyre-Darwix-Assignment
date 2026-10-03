@@ -1,0 +1,71 @@
+{
+  "id": "id_cooperative_formal",
+  "title": "ID cooperative formal Bahasa",
+  "market": "ID",
+  "call_id": "C-9AA95928",
+  "slots": {
+    "name": "Budi Santoso",
+    "city": "Jakarta",
+    "callback_time": "callback besok sore."
+  },
+  "qualification": {
+    "status": "Incomplete",
+    "plan": null,
+    "reasons": [
+      "still need: age"
+    ],
+    "zone": null,
+    "ppme_required": false,
+    "disclaimers": []
+  },
+  "lead_id": "LD-057F1D23",
+  "end_reason": null,
+  "turns": [
+    {
+      "role": "agent",
+      "text": "Selamat siang, Bu, Pak. Saya Sari dari MitraDana. Panggilan ini direkam untuk kualitas layanan. Saya hubungi terkait pembiayaan MitraDana — cek kelayakan atau pengingat cicilan, bukan penagihan kasar. Boleh minta nama Bapak/Ibu?"
+    },
+    {
+      "role": "customer",
+      "text": "Selamat siang, nama saya Budi Santoso, usia 35, tinggal di Jakarta."
+    },
+    {
+      "role": "agent",
+      "text": "Usia berapa tahun?",
+      "citations": [
+        "[kb_id_faq_011 | MitraDana - Kepatuhan Panggilan > Data Yang Boleh Diambil | kepatuhan.md § Data Yang Boleh Diambil | v1.0]",
+        "[kb_id_qualification_rules_001 | MitraDana Multifinance - Produk & Aturan Cicilan (Indonesia) > Syarat Kualifikasi | produk.md § Syarat Kualifikasi | v1.0]",
+        "[kb_id_faq_014 | MitraDana Multifinance - Produk & Aturan Cicilan (Indonesia) > Regional (Jawa / Yogyakarta) | produk.md § Regional (Jawa / Yogyakarta) | v1.0]"
+      ],
+      "confidence": 0.416,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Saya mau tanya DanaCepat, plafon 20 juta, tenor 12 bulan. Berapa angsurannya?"
+    },
+    {
+      "role": "agent",
+      "text": "Pinjaman tanpa agunan. Plafon Rp 5 juta - Rp 50 juta. Tenor 6, 12, 18, 24 bulan. Bunga flat sesuai rate card cabang. **DP** tidak berlaku (karena bukan kendaraan). **Cicilan / angsuran** jatuh tempo setiap tanggal kontrak. **Denda** keterlambatan 0,5% per hari dari angsuran, maksimum 3% per bulan. Contoh: plafon Rp 20 juta, tenor 12 bulan, angsuran sekitar Rp 2,05 juta / bulan (indikatif, belum termasuk biaya admin). Usia berapa tahun?",
+      "citations": [
+        "[kb_id_premium_pricing_001 | MitraDana Multifinance - Produk & Aturan Cicilan (Indonesia) > DanaCepat (pembiayaan Dana Tunai) | produk.md § DanaCepat (pembiayaan Dana Tunai) | v1.0]",
+        "[kb_id_faq_006 | MitraDana - Keberatan, FAQ, Dan Eskalasi > Nada Jawa | keberatan_faq.md § Nada Jawa | v1.0]",
+        "[kb_id_faq_002 | MitraDana - Keberatan, FAQ, Dan Eskalasi > Keberatan: \"DP-nya Terlalu Tinggi.\" | keberatan_faq.md § Keberatan: \"DP-nya Terlalu Tinggi.\" | v1.0]"
+      ],
+      "confidence": 0.698,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Baik, silakan callback besok sore."
+    },
+    {
+      "role": "agent",
+      "text": "I will schedule a callback (callback besok sore.) and save a lead summary for a licensed advisor.",
+      "citations": [],
+      "confidence": 0.165,
+      "action": "schedule_callback"
+    }
+  ],
+  "transcript_path": "D:\\DarwixAI Assignment\\data\\transcripts\\id_cooperative_formal.json"
+}

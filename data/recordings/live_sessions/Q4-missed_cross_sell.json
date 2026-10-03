@@ -1,0 +1,158 @@
+{
+  "call_id": "Q4-missed_cross_sell",
+  "transcript": [
+    {
+      "t_start": 0.0,
+      "t_end": 6.0,
+      "speaker": "agent",
+      "text": "Hello, this is Aisha from Sentinel Health Insurance. This call is being recorded for quality and training purposes. Insurance is the subject matter of solicitation.",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 6.0,
+      "t_end": 11.0,
+      "speaker": "customer",
+      "text": "Hi, I am Rohan, 36, Pune. I want cover for myself.",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 11.0,
+      "t_end": 15.0,
+      "speaker": "agent",
+      "text": "Sure — Essential or Family Shield are the usual starting points. Any health conditions?",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 15.0,
+      "t_end": 21.0,
+      "speaker": "customer",
+      "text": "No conditions. Also I have a second car at home and my wife drives it daily — not sure if that matters.",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 21.0,
+      "t_end": 25.0,
+      "speaker": "agent",
+      "text": "Health insurance does not cover cars, but Family Shield would cover your wife. Shall I quote Essential only?",
+      "asr_latency_ms": 120.0
+    }
+  ],
+  "nudges": [
+    {
+      "id": "N001",
+      "kind": "buying_signal",
+      "text": "Acknowledge the customer's intent to purchase health insurance and inquire about their specific coverage needs or budget.",
+      "confidence": 0.9,
+      "priority": 40,
+      "created_t": 11.0,
+      "expires_t": 71.0,
+      "evidence": "I want cover for myself.",
+      "suppressed": false,
+      "suppress_reason": null
+    },
+    {
+      "id": "N003",
+      "kind": "missed_cross_sell",
+      "text": "Customer mentioned another vehicle / family member. Offer the relevant multi-cover or rider before closing.",
+      "confidence": 0.82,
+      "priority": 60,
+      "created_t": 21.0,
+      "expires_t": 81.0,
+      "evidence": "No conditions. Also I have a second car at home and my wife drives it daily — not sure if that matters.",
+      "suppressed": false,
+      "suppress_reason": null
+    }
+  ],
+  "suppressed": [
+    {
+      "id": "N002",
+      "kind": "buying_signal",
+      "text": "Acknowledge the customer's intent to purchase individual coverage and smoothly transition to discussing the features of Essential and Family Shield plans.",
+      "confidence": 0.9,
+      "priority": 40,
+      "created_t": 15.0,
+      "expires_t": 75.0,
+      "evidence": "I want cover for myself.",
+      "suppressed": true,
+      "suppress_reason": "cooldown buying_signal last=11.0s"
+    },
+    {
+      "id": "N004",
+      "kind": "missed_cross_sell",
+      "text": "The customer mentioned having a second car; offer auto insurance or a multi-product bundle.",
+      "confidence": 0.85,
+      "priority": 60,
+      "created_t": 21.0,
+      "expires_t": 81.0,
+      "evidence": "Also I have a second car at home and my wife drives it daily",
+      "suppressed": true,
+      "suppress_reason": "cooldown missed_cross_sell last=21.0s"
+    },
+    {
+      "id": "N005",
+      "kind": "missed_cross_sell",
+      "text": "The customer mentioned having a second car driven daily by his wife, presenting a clear cross-sell opportunity for auto insurance.",
+      "confidence": 0.9,
+      "priority": 60,
+      "created_t": 25.0,
+      "expires_t": 85.0,
+      "evidence": "Also I have a second car at home and my wife drives it daily — not sure if that matters.",
+      "suppressed": true,
+      "suppress_reason": "cooldown missed_cross_sell last=21.0s"
+    }
+  ],
+  "controller": {
+    "emitted": 2,
+    "suppressed": 3,
+    "by_kind_emitted": {
+      "buying_signal": 1,
+      "missed_cross_sell": 1
+    },
+    "by_kind_suppressed": {
+      "buying_signal": 1,
+      "missed_cross_sell": 2
+    },
+    "suppress_reasons": {
+      "cooldown buying_signal last=11.0s": 1,
+      "cooldown missed_cross_sell last=21.0s": 2
+    }
+  },
+  "latency": {
+    "asr": {
+      "count": 5,
+      "p50_ms": 120.0,
+      "p95_ms": 120.0,
+      "max_ms": 120.0,
+      "mean_ms": 120.0
+    },
+    "signal_extraction": {
+      "count": 5,
+      "p50_ms": 1135.9,
+      "p95_ms": 1281.8,
+      "max_ms": 1281.8,
+      "mean_ms": 1157.6
+    },
+    "nudge_control": {
+      "count": 5,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "max_ms": 0.0,
+      "mean_ms": 0.0
+    },
+    "delivery": {
+      "count": 2,
+      "p50_ms": 0.0,
+      "p95_ms": 0.2,
+      "max_ms": 0.2,
+      "mean_ms": 0.1
+    },
+    "e2e_chunk": {
+      "count": 10,
+      "p50_ms": 1256.0,
+      "p95_ms": 1401.8,
+      "max_ms": 1401.8,
+      "mean_ms": 1277.7
+    }
+  },
+  "agent_disclosed": true
+}

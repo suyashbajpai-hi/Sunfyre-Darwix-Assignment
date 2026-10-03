@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Knowledge base · Sunfyre</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/static/app.css?v=3">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="/">
+    <div class="mark">SF</div>
+    <div><h1>Knowledge base</h1><small>Retrieval console</small></div>
+  </a>
+  <nav class="nav">
+    <a href="/">Home</a>
+    <a href="/agent">Voice</a>
+    <a class="active" href="/kb">Knowledge</a>
+    <a href="/native">Locales</a>
+    <a href="/live">Live coach</a>
+  </nav>
+</header>
+<main class="page">
+  <div class="hero">
+    <p class="kicker">Retrieval · citations · confidence</p>
+    <h2>Explore the production knowledge base.</h2>
+    <p class="lede">Each result surfaces the record identifier, source file, version, and a confidence tier. Queries outside the corpus return low confidence, causing the voice agent to decline rather than guess.</p>
+  </div>
+  <div class="stats" id="stats"></div>
+  <div class="bar">
+    <input id="q" placeholder="Ask about products, policies, qualification rules, or common objections…" />
+    <select id="market">
+      <option value="IN">India · Sentinel Health</option>
+      <option value="PH">Philippines · ShieldLife</option>
+      <option value="ID">Indonesia · MitraDana</option>
+    </select>
+    <button id="go">Search</button>
+  </div>
+  <div class="meta" id="meta"></div>
+  <div id="hits"></div>
+</main>
+<script>
+fetch('/kb/stats').then(r => r.json()).then(d => {
+  document.getElementById('stats').innerHTML =
+    `<div class="stat"><b>${d.active_records ?? '—'}</b><span>active records</span></div>` +
+    `<div class="stat"><b>${d.superseded_records ?? 0}</b><span>superseded</span></div>` +
+    `<div class="stat"><b>${d.dense_index ? 'hybrid' : 'BM25'}</b><span>index mode</span></div>`;
+}).catch(() => {});
+const q = document.getElementById('q');
+const go = document.getElementById('go');
+async function search() {
+  const query = q.value.trim();
+  if (query.length < 2) return;
+  const market = document.getElementById('market').value;
+  const res = await fetch(`/kb/search?q=${encodeURIComponent(query)}&k=5&market=${market}`);
+  const data = await res.json();
+  document.getElementById('meta').innerHTML =
+    `mode <b>${data.mode}</b> · confidence <span class="${data.tier}">${data.confidence}</span> (${data.tier}) · grounded=${data.grounded} · expanded: ${data.expanded_query}`;
+  document.getElementById('hits').innerHTML = (data.hits || []).map(h => `
+    <article class="hit">
+      <h3>${h.rank}. ${h.title}</h3>
+      <div>
+        <span class="pill">${h.record_id}</span>
+        <span class="pill">${h.category}</span>
+        <span class="pill">score ${h.score}</span>
+        ${(h.products||[]).map(p => `<span class="pill">${p}</span>`).join('')}
+      </div>
+      <p>${h.content}</p>
+      <div class="cite">${h.citation}<br>${h.explanation}</div>
+    </article>`).join('') || '<p class="hint">No matching records found.</p>';
+}
+go.onclick = search;
+q.addEventListener('keydown', e => { if (e.key === 'Enter') search(); });
+</script>
+</body>
+</html>

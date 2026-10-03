@@ -1,0 +1,530 @@
+[
+  {
+    "record_id": "kb_in_compliance_001",
+    "title": "Mandatory Call Disclosures & Conduct Rules (Compliance)",
+    "content": "Compliance Dept. | Version 1.4 | Dated 2024-03-01 | Applies to all outbound and inbound tele-sales calls, including AI voice agents.",
+    "category": "compliance",
+    "subcategory": null,
+    "products": [],
+    "tags": [],
+    "intent_types": [
+      "compliance"
+    ],
+    "source": {
+      "file": "docs/compliance_disclosures.md",
+      "type": "markdown",
+      "locator": "",
+      "doc_version": "1.4",
+      "doc_date": "2024-03-01",
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "b4847027014b801b",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 0,
+    "parent_doc_id": "docs_compliance_disclosures_md",
+    "superseded": false,
+    "quality_flags": [],
+    "created_at": "2026-10-01",
+    "token_estimate": 27
+  },
+  {
+    "record_id": "kb_in_customer_service_001",
+    "title": "Sentinel Health - Customer Service Log Export (Jan 2024)",
+    "content": "SENTINEL HEALTH - CUSTOMER SERVICE LOG EXPORT (Jan 2024)",
+    "category": "customer_service",
+    "subcategory": null,
+    "products": [],
+    "tags": [],
+    "intent_types": [
+      "faq"
+    ],
+    "source": {
+      "file": "docs/customer_service_log.txt",
+      "type": "text",
+      "locator": "",
+      "doc_version": "1.0",
+      "doc_date": "2024-01-01",
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "496549a0b8159d5d",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 0,
+    "parent_doc_id": "docs_customer_service_log_txt",
+    "superseded": false,
+    "quality_flags": [],
+    "created_at": "2026-10-01",
+    "token_estimate": 11
+  },
+  {
+    "record_id": "kb_in_objection_handling_001",
+    "title": "Objection Handling Playbook - Health Insurance Tele-Sales",
+    "content": "Sales Enablement | Version 2024.1 | Last reviewed 2024-02-15\nApproved responses only. Agents must not invent statistics, promise approvals, or disparage competitors. Where a customer asks something not covered here or in the product documents, say you will check and arrange a callback from a human advisor.",
+    "category": "objection_handling",
+    "subcategory": null,
+    "products": [],
+    "tags": [],
+    "intent_types": [
+      "objection"
+    ],
+    "source": {
+      "file": "docs/objection_handling_playbook.md",
+      "type": "markdown",
+      "locator": "",
+      "doc_version": "2024.1",
+      "doc_date": "2024-02-15",
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "51c652b3b8501a42",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 0,
+    "parent_doc_id": "docs_objection_handling_playbook_md",
+    "superseded": false,
+    "quality_flags": [],
+    "created_at": "2026-10-01",
+    "token_estimate": 61
+  },
+  {
+    "record_id": "kb_in_premium_pricing_001",
+    "title": "Plan Rates > Essential",
+    "content": "(row 2) plan: Essential; age band: 18-25; sum insured: 300000; annual premium excl gst: 4100; zone: A.\n(row 3) plan: Essential; age band: 18-25; sum insured: 500000; annual premium excl gst: 5400; zone: A.\n(row 4) plan: Essential; age band: 26-35; sum insured: 300000; annual premium excl gst: 5200; zone: A.\n(row 5) plan: Essential; age band: 26-35; sum insured: 500000; annual premium excl gst: 7200; zone: A.\n(row 6) plan: Essential; age band: 26-35; sum insured: 750000; annual premium excl gst: 9100; zone: A.\n(row 7) plan: Essential; age band: 36-45; sum insured: 500000; annual premium excl gst: 9800; zone: A.\n(row 8) plan: Essential; age band: 36-45; sum insured: 750000; annual premium excl gst: 12400; zone: A.\n(row 9) plan: Essential; age band: 46-55; sum insured: 500000; annual premium excl gst: 14600; zone: A; notes: pre-policy medical examination required.\n(row 10) plan: Essential; age band: 46-55; sum insured: 750000; annual premium excl gst: 18200; zone: A; notes: pre-policy medical examination required.\n(row 11) plan: Essential; age band: 56-65; sum insured: 500000; annual premium excl gst: 21900; zone: A; notes: pre-policy medical examination required.",
+    "category": "premium_pricing",
+    "subcategory": null,
+    "products": [
+      "essential"
+    ],
+    "tags": [
+      "table"
+    ],
+    "intent_types": [
+      "faq",
+      "product"
+    ],
+    "source": {
+      "file": "docs/plan_rates.csv",
+      "type": "csv",
+      "locator": "rows for Essential",
+      "doc_version": "1.0",
+      "doc_date": null,
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "8fc902dde5d45ecf",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 0,
+    "parent_doc_id": "docs_plan_rates_csv",
+    "superseded": false,
+    "quality_flags": [],
+    "created_at": "2026-10-01",
+    "token_estimate": 240
+  },
+  {
+    "record_id": "kb_in_policy_terms_001",
+    "title": "Sentinel Family Shield - Policy Wording > Family Shield - Policy Wording",
+    "content": "Sentinel Family Shield - POLICY WORDING UIN: SENHLIP24001V012324 | Version 1.2 | Effective 2024-04-01",
+    "category": "policy_terms",
+    "subcategory": null,
+    "products": [
+      "family_shield"
+    ],
+    "tags": [],
+    "intent_types": [
+      "policy"
+    ],
+    "source": {
+      "file": "docs/policy_wording_family_shield.pdf",
+      "type": "pdf",
+      "locator": "page 1",
+      "doc_version": "1.2",
+      "doc_date": "2024-04-01",
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "1875c70310d5268b",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 0,
+    "parent_doc_id": "docs_policy_wording_family_shield_pdf",
+    "superseded": false,
+    "quality_flags": [],
+    "created_at": "2026-10-01",
+    "token_estimate": 18
+  },
+  {
+    "record_id": "kb_in_product_010",
+    "title": "Sentinel Family Shield - Policy Wording > Coverage",
+    "content": "B.1 In-patient Hospitalisation: reasonable and customary charges for room, boarding, nursing, ICU, surgeon, anaesthetist, consultants, operation theatre, medicines, diagnostics, and implants, for hospitalisation of at least 24 consecutive hours. B.2 Pre-hospitalisation medical expenses incurred up to 60 days before admission and Post- hospitalisation expenses up to 90 days after discharge, related to the same illness.",
+    "category": "product",
+    "subcategory": null,
+    "products": [
+      "family_shield"
+    ],
+    "tags": [],
+    "intent_types": [
+      "product"
+    ],
+    "source": {
+      "file": "docs/policy_wording_family_shield.pdf",
+      "type": "pdf",
+      "locator": "page 1",
+      "doc_version": "1.2",
+      "doc_date": "2024-04-01",
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "5b17626dcacff742",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 3,
+    "parent_doc_id": "docs_policy_wording_family_shield_pdf",
+    "superseded": false,
+    "quality_flags": [],
+    "created_at": "2026-10-01",
+    "token_estimate": 71
+  },
+  {
+    "record_id": "kb_in_waiting_periods_002",
+    "title": "Sentinel Family Shield - Policy Wording > Waiting Periods > Initial Waiting Period: 30 Days From The First Policy Start Date For Any Illness. Not",
+    "content": "C.1 Initial waiting period: 30 days from the first policy start date for any illness. Not applicable to accidental injuries. C.2 pre-existing disease waiting period: 36 months of continuous coverage from the first policy start date. C.3 Specific illness waiting period: 24 months for cataract, hernia, hydrocele, piles, fissure, fistula, sinusitis, benign prostatic hypertrophy, joint replacement unless due to accident, uterine fibroids, kidney stones, gall bladder stones, varicose veins, and tonsillectomy.",
+    "category": "waiting_periods",
+    "subcategory": null,
+    "products": [
+      "family_shield"
+    ],
+    "tags": [],
+    "intent_types": [
+      "faq",
+      "policy"
+    ],
+    "source": {
+      "file": "docs/policy_wording_family_shield.pdf",
+      "type": "pdf",
+      "locator": "page 2",
+      "doc_version": "1.2",
+      "doc_date": "2024-04-01",
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "4dae0b7443cfb794",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 7,
+    "parent_doc_id": "docs_policy_wording_family_shield_pdf",
+    "superseded": false,
+    "quality_flags": [],
+    "created_at": "2026-10-01",
+    "token_estimate": 92
+  },
+  {
+    "record_id": "kb_in_exclusions_001",
+    "title": "Sentinel Family Shield - Policy Wording > Exclusions > Cosmetic Or Plastic Surgery Unless For Reconstruction Following An Accident, Burn Or",
+    "content": "D.1 Cosmetic or plastic surgery unless for reconstruction following an accident, burn or cancer.",
+    "category": "exclusions",
+    "subcategory": null,
+    "products": [
+      "family_shield"
+    ],
+    "tags": [],
+    "intent_types": [
+      "policy"
+    ],
+    "source": {
+      "file": "docs/policy_wording_family_shield.pdf",
+      "type": "pdf",
+      "locator": "page 2",
+      "doc_version": "1.2",
+      "doc_date": "2024-04-01",
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "724a401d5bfec357",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 9,
+    "parent_doc_id": "docs_policy_wording_family_shield_pdf",
+    "superseded": false,
+    "quality_flags": [],
+    "created_at": "2026-10-01",
+    "token_estimate": 18
+  },
+  {
+    "record_id": "kb_in_eligibility_underwriting_001",
+    "title": "Sentinel Family Shield - Policy Wording > Exclusions > Obesity And Weight-control Treatment Unless BMI >= 40 Or >= 35 With Co-morbidities.",
+    "content": "D.9 Obesity and weight-control treatment unless BMI >= 40 or >= 35 with co-morbidities.",
+    "category": "eligibility_underwriting",
+    "subcategory": "exclusions",
+    "products": [
+      "family_shield"
+    ],
+    "tags": [],
+    "intent_types": [
+      "qualification"
+    ],
+    "source": {
+      "file": "docs/policy_wording_family_shield.pdf",
+      "type": "pdf",
+      "locator": "page 2",
+      "doc_version": "1.2",
+      "doc_date": "2024-04-01",
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "c1966c3aa654bae3",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 17,
+    "parent_doc_id": "docs_policy_wording_family_shield_pdf",
+    "superseded": false,
+    "quality_flags": [],
+    "created_at": "2026-10-01",
+    "token_estimate": 18
+  },
+  {
+    "record_id": "kb_in_claims_002",
+    "title": "Sentinel Family Shield - Policy Wording > Claims",
+    "content": "E.1 Cashless: present the health card at a network hospital. Pre-authorisation decision within 2 hours of receipt of complete documents for planned admission, and within 60 minutes for emergency admission.",
+    "category": "claims",
+    "subcategory": null,
+    "products": [
+      "family_shield"
+    ],
+    "tags": [],
+    "intent_types": [
+      "faq",
+      "policy"
+    ],
+    "source": {
+      "file": "docs/policy_wording_family_shield.pdf",
+      "type": "pdf",
+      "locator": "page 2",
+      "doc_version": "1.2",
+      "doc_date": "2024-04-01",
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "2745154d70d3131d",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 19,
+    "parent_doc_id": "docs_policy_wording_family_shield_pdf",
+    "superseded": false,
+    "quality_flags": [],
+    "created_at": "2026-10-01",
+    "token_estimate": 39
+  },
+  {
+    "record_id": "kb_in_qualification_rules_001",
+    "title": "Sentinel Health - Underwriting & Qualification Rules (Internal) > Lead Qualification Criteria (for Tele-sales And Voice Agents)",
+    "content": "A lead is **Qualified** when all of the following are captured and acceptable:\n- Age of oldest proposed member is within the plan's entry range.\n- Number of members and relationship (self / spouse / children / parents).\n- City or PIN code (to determine zone).\n- Declared pre-existing disease do not fall in the Decline list.\n- Desired sum insured is one of the available options.\n- Customer agrees to a follow-up (quotation or callback).\nA lead is **Referred** when a pre-existing disease requires underwriter review, when a hazardous occupation is declared, or when details are conflicting (for example a stated age that does not match the stated date of birth). Conflicts must be clarified with the customer; if they cannot be resolved on the call, mark the lead as Referred and do NOT promise eligibility.\nA lead is **Not Eligible** when age is outside all plan ranges or a declared condition is in the Decline list. Agents must communicate this politely and offer to share information on the Senior Care plan where age-appropriate.\nAgents must never state that a customer is \"approved\" or \"guaranteed\" cover. Eligibility is always preliminary and subject to underwriting.",
+    "category": "qualification_rules",
+    "subcategory": "eligibility_underwriting",
+    "products": [
+      "senior_care"
+    ],
+    "tags": [],
+    "intent_types": [
+      "qualification"
+    ],
+    "source": {
+      "file": "docs/underwriting_rules.md",
+      "type": "markdown",
+      "locator": "Lead Qualification Criteria (for Tele-sales And Voice Agents)",
+      "doc_version": "3.2",
+      "doc_date": "2024-04-01",
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "75fa3345db88c546",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 6,
+    "parent_doc_id": "docs_underwriting_rules_md",
+    "superseded": false,
+    "quality_flags": [
+      "contains_outdated_text"
+    ],
+    "created_at": "2026-10-01",
+    "token_estimate": 253
+  },
+  {
+    "record_id": "kb_in_forms_001",
+    "title": "Health Insurance Proposal Form > Proposer Details",
+    "content": "Field full_name (text, required): Full Name (as per ID).\nField date_of_birth (date, required): Date of Birth (DD/MM/YYYY).\nField gender (select, required): Gender. Options: Male, Female, Other.\nField mobile_number (phone, required): Mobile Number.\nField email (email, optional): Email ID.\nField pin_code (text, required): PIN Code. Used to determine premium zone.\nField occupation (text, required): Occupation.",
+    "category": "forms",
+    "subcategory": null,
+    "products": [],
+    "tags": [
+      "form"
+    ],
+    "intent_types": [
+      "qualification"
+    ],
+    "source": {
+      "file": "forms/proposal_form.json",
+      "type": "json_form",
+      "locator": "Proposer Details",
+      "doc_version": "April 2024",
+      "doc_date": null,
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "fadca02fe4491c90",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 0,
+    "parent_doc_id": "forms_proposal_form_json",
+    "superseded": false,
+    "quality_flags": [],
+    "created_at": "2026-10-01",
+    "token_estimate": 70
+  },
+  {
+    "record_id": "kb_in_faq_001",
+    "title": "FAQ > Frequently Asked Questions > Policy Servicing > Is There A Co-pay?",
+    "content": "Essential has a 10% co-payment on every claim. Family Shield has no co-payment unless a member was 61 or older at entry, in which case 20% applies to that member. Senior Care has a 20% co-payment, which can be removed with the co-payment Waiver rider.",
+    "category": "faq",
+    "subcategory": null,
+    "products": [
+      "essential",
+      "family_shield",
+      "senior_care",
+      "copay_waiver_rider"
+    ],
+    "tags": [
+      "faq"
+    ],
+    "intent_types": [
+      "faq"
+    ],
+    "source": {
+      "file": "website/faq.html",
+      "type": "html",
+      "locator": "Is There A Co-pay?",
+      "doc_version": "1.0",
+      "doc_date": null,
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "764f2ec85b1d7e11",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 14,
+    "parent_doc_id": "website_faq_html",
+    "superseded": false,
+    "quality_flags": [],
+    "created_at": "2026-10-01",
+    "token_estimate": 58
+  },
+  {
+    "record_id": "kb_in_company_001",
+    "title": "Sentinel Health Insurance > Health Cover That Actually Pays When It Matters > About Sentinel Health Insurance",
+    "content": "Sentinel Health Insurance Company Ltd. is a standalone health insurer licensed by the Insurance Regulatory and Development Authority of India (IRDAI), registration no. 162. Our head office is in Pune, Maharashtra and we operate 84 branches and 1,100 partner outlets nationwide.\nOur claim settlement ratio for FY 2023-24 was 96.4%. Claims are processed in-house; we do not use a third-party administrator (TPA), which is why our cashless pre-authorisation is typically approved within 2 hours.",
+    "category": "company",
+    "subcategory": null,
+    "products": [],
+    "tags": [],
+    "intent_types": [
+      "faq",
+      "product"
+    ],
+    "source": {
+      "file": "website/index.html",
+      "type": "html",
+      "locator": "About Sentinel Health Insurance",
+      "doc_version": "1.0",
+      "doc_date": null,
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "d0722dfc215ee224",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 1,
+    "parent_doc_id": "website_index_html",
+    "superseded": false,
+    "quality_flags": [],
+    "created_at": "2026-10-01",
+    "token_estimate": 96
+  },
+  {
+    "record_id": "kb_in_partnership_001",
+    "title": "Branch Partners > Become A Sentinel Branch Partner",
+    "content": "Sentinel works with 1,100 partner outlets - banks, NBFCs, pharmacies and independent agencies - who distribute our health plans in their communities.",
+    "category": "partnership",
+    "subcategory": null,
+    "products": [],
+    "tags": [],
+    "intent_types": [
+      "product"
+    ],
+    "source": {
+      "file": "website/partners.html",
+      "type": "html",
+      "locator": "Become A Sentinel Branch Partner",
+      "doc_version": "1.0",
+      "doc_date": null,
+      "url": null
+    },
+    "market": "IN",
+    "language": "en",
+    "version": "1.0",
+    "kb_version": "2026.10.01-3",
+    "content_hash": "9fbab31f601a327a",
+    "pii": false,
+    "pii_types": [],
+    "chunk_index": 0,
+    "parent_doc_id": "website_partners_html",
+    "superseded": false,
+    "quality_flags": [],
+    "created_at": "2026-10-01",
+    "token_estimate": 28
+  }
+]

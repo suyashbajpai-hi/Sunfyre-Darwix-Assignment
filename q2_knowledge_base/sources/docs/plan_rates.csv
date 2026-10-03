@@ -1,0 +1,25 @@
+plan,age_band,sum_insured_rs,annual_premium_rs_excl_gst,zone,notes
+Essential,18-25,300000,4100,A,
+Essential,18-25,500000,5400,A,
+Essential,26-35,300000,5200,A,
+Essential,26-35,500000,7200,A,
+Essential,26-35,750000,9100,A,
+Essential,36-45,500000,9800,A,
+Essential,36-45,750000,12400,A,
+Essential,46-55,500000,14600,A,PPME required
+Essential,46-55,750000,18200,A,PPME required
+Essential,56-65,500000,21900,A,PPME required
+Family Shield,2A,500000,12800,A,2 adults oldest <=35
+Family Shield,2A+1C,1000000,18900,A,2 adults oldest <=35
+Family Shield,2A+2C,1000000,21400,A,2 adults oldest <=35
+Family Shield,2A+2C,1500000,26800,A,2 adults oldest <=35
+Family Shield,2A+2C,1000000,29700,A,2 adults oldest 36-45
+Family Shield,2A+2C,1500000,36200,A,2 adults oldest 36-45
+Family Shield,2A+2C,2500000,48900,A,2 adults oldest 36-45; PPME required
+Family Shield,2A,1000000,41200,A,2 adults oldest 46-55; PPME required
+Senior Care,61-65,300000,24800,A,PPME compulsory
+Senior Care,61-65,500000,31500,A,PPME compulsory
+Senior Care,66-70,500000,39800,A,PPME compulsory
+Senior Care,71-75,500000,51200,A,PPME compulsory
+Senior Care,76-80,300000,0,A,PPME compulsory; RATE PENDING APPROVAL
+Senior Care,66-70,1000000,58600,A,PPME compulsory

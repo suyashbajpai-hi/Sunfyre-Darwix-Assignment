@@ -1,0 +1,82 @@
+{
+  "id": "ph_cooperative_taglish",
+  "title": "PH cooperative Taglish lead",
+  "market": "PH",
+  "call_id": "C-847494D7",
+  "slots": {
+    "name": "Ana Reyes",
+    "city": "Quezon City",
+    "members": "Gusto ko sana term life, asawa ko ang beneficiary."
+  },
+  "qualification": {
+    "status": "Incomplete",
+    "plan": null,
+    "reasons": [
+      "still need: age"
+    ],
+    "zone": null,
+    "ppme_required": false,
+    "disclaimers": []
+  },
+  "lead_id": "LD-BB9EA1E4",
+  "end_reason": null,
+  "turns": [
+    {
+      "role": "agent",
+      "text": "Hello po, this is Mia from ShieldLife, partner ng Banco Isla. Nire-record po namin ang tawag for quality and training. Hindi po ito hard sell — titingnan lang natin kung qualified po kayo sa term life o credit life cover. Pwede po bang makuha ang pangalan ninyo?"
+    },
+    {
+      "role": "customer",
+      "text": "Hello po, ako si Ana Reyes, 32, from Quezon City."
+    },
+    {
+      "role": "agent",
+      "text": "Ilang taon po kayo?",
+      "citations": [],
+      "confidence": 0.159,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Gusto ko sana term life, asawa ko ang beneficiary."
+    },
+    {
+      "role": "agent",
+      "text": "Ilang taon po kayo?",
+      "citations": [
+        "[kb_ph_objection_handling_003 | ShieldLife - Objection & FAQ Playbook (PH) > Objection: \"May Insurance Na Ako Sa Office.\" | objections_faq.md § Objection: \"May Insurance Na Ako Sa Office.\" | v1.0]",
+        "[kb_ph_qualification_rules_001 | ShieldLife PH - Qualification & Compliance > Qualification (Term / Whole Life) | qualification.md § Qualification (Term / Whole Life) | v1.0]",
+        "[kb_ph_objection_handling_006 | ShieldLife - Objection & FAQ Playbook (PH) > FAQ: Sino Ang Pwedeng Maging Beneficiary? | objections_faq.md § FAQ: Sino Ang Pwedeng Maging Beneficiary? | v1.0]"
+      ],
+      "confidence": 0.727,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Hindi po ako smoker. Magkano po ang premium for one million coverage?"
+    },
+    {
+      "role": "agent",
+      "text": "Whole-life participating plan. Premiums payable to age 60 or 20 years, whichever later. Builds cash value after year 3. Optional **riders**: accidental death, waiver of premium, critical illness (20 conditions, 90-day waiting, 30-day survival). Beneficiary must be named; if none, estate. \"Magkano ang premium\" depends on age, gender, smoker status, sum insured - never quote a number that is not on the rate card. Ilang taon po kayo?",
+      "citations": [
+        "[kb_ph_product_002 | ShieldLife × Banco Isla - Product Guide (Philippines) > ShieldLife Whole Life | products.md § ShieldLife Whole Life | v1.0]",
+        "[kb_ph_objection_handling_004 | ShieldLife - Objection & FAQ Playbook (PH) > Objection: \"Baka Mag-lapse, Sayang.\" | objections_faq.md § Objection: \"Baka Mag-lapse, Sayang.\" | v1.0]",
+        "[kb_ph_objection_handling_007 | ShieldLife - Objection & FAQ Playbook (PH) > FAQ: Pwede Ba Ang Smoker? | objections_faq.md § FAQ: Pwede Ba Ang Smoker? | v1.0]"
+      ],
+      "confidence": 0.547,
+      "action": null
+    },
+    {
+      "role": "customer",
+      "text": "Sige po, pakicall back tomorrow evening."
+    },
+    {
+      "role": "agent",
+      "text": "I will schedule a callback (a time you prefer) and save a lead summary for a licensed advisor.",
+      "citations": [],
+      "confidence": 0.0,
+      "action": "schedule_callback"
+    }
+  ],
+  "transcript_path": "D:\\DarwixAI Assignment\\data\\transcripts\\ph_cooperative_taglish.json"
+}

@@ -1,0 +1,129 @@
+{
+  "call_id": "Q4-replay-id_colloquial_denda",
+  "transcript": [
+    {
+      "t_start": 0.0,
+      "t_end": 12.0,
+      "speaker": "agent",
+      "text": "Selamat siang, Bu, Pak. Saya Sari dari MitraDana. Panggilan ini direkam untuk kualitas layanan. Saya hubungi terkait pembiayaan MitraDana — cek kelayakan atau pengingat cicilan, bukan penagihan kasar. Boleh minta nama Bapak/Ibu?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 12.0,
+      "t_end": 15.04,
+      "speaker": "customer",
+      "text": "Halo Mbak, aku Rina, 29 tahun, di Bandung.",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 15.04,
+      "t_end": 17.04,
+      "speaker": "agent",
+      "text": "Siapa nama Bapak/Ibu?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 17.04,
+      "t_end": 21.22,
+      "speaker": "customer",
+      "text": "Cicilannya telat, dendanya kejebak mahal banget dong. DP MotorPlus bisa diturunin?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 21.22,
+      "t_end": 33.22,
+      "speaker": "agent",
+      "text": "Disetujui: \"Saya paham, Pak/Bu. Denda 0,5% per hari, max 3% sebulan, itu sesuai kontrak. Kalau Bapak bayar hari ini sebelum pukul 20.00, kita kunci denda yang sudah jalan saja - tidak nambah malam ini. Kalau masih berat, saya bisa minta petugas cabang tawarkan reschedule.\" Jangan: hapus denda sendiri. Siapa nama Bapak/Ibu?",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 33.22,
+      "t_end": 36.26,
+      "speaker": "customer",
+      "text": "Ya udah, hubungi aku setelah gajian tanggal 10.",
+      "asr_latency_ms": 110.0
+    },
+    {
+      "t_start": 36.26,
+      "t_end": 38.26,
+      "speaker": "agent",
+      "text": "Siapa nama Bapak/Ibu?",
+      "asr_latency_ms": 110.0
+    }
+  ],
+  "nudges": [
+    {
+      "id": "N001",
+      "kind": "payment_difficulty",
+      "text": "Offer an approved payment-support / lower SI / monthly mode / callback path. Do not invent a discount.",
+      "confidence": 0.8,
+      "priority": 70,
+      "created_t": 21.22,
+      "expires_t": 81.22,
+      "evidence": "Cicilannya telat, dendanya kejebak mahal banget dong. DP MotorPlus bisa diturunin?",
+      "suppressed": false,
+      "suppress_reason": null
+    },
+    {
+      "id": "N002",
+      "kind": "callback_need",
+      "text": "Stop pitching. Capture a callback slot and confirm it.",
+      "confidence": 0.75,
+      "priority": 50,
+      "created_t": 36.26,
+      "expires_t": 96.25999999999999,
+      "evidence": "Ya udah, hubungi aku setelah gajian tanggal 10.",
+      "suppressed": false,
+      "suppress_reason": null
+    }
+  ],
+  "suppressed": [],
+  "controller": {
+    "emitted": 2,
+    "suppressed": 0,
+    "by_kind_emitted": {
+      "payment_difficulty": 1,
+      "callback_need": 1
+    },
+    "by_kind_suppressed": {},
+    "suppress_reasons": {}
+  },
+  "latency": {
+    "asr": {
+      "count": 7,
+      "p50_ms": 110.0,
+      "p95_ms": 110.0,
+      "max_ms": 110.0,
+      "mean_ms": 110.0
+    },
+    "signal_extraction": {
+      "count": 7,
+      "p50_ms": 0.0,
+      "p95_ms": 0.1,
+      "max_ms": 0.1,
+      "mean_ms": 0.0
+    },
+    "nudge_control": {
+      "count": 2,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "max_ms": 0.0,
+      "mean_ms": 0.0
+    },
+    "delivery": {
+      "count": 2,
+      "p50_ms": 0.0,
+      "p95_ms": 0.0,
+      "max_ms": 0.0,
+      "mean_ms": 0.0
+    },
+    "e2e_chunk": {
+      "count": 4,
+      "p50_ms": 110.0,
+      "p95_ms": 110.0,
+      "max_ms": 110.0,
+      "mean_ms": 110.0
+    }
+  },
+  "agent_disclosed": true
+}

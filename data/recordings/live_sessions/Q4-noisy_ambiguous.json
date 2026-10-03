@@ -1,0 +1,73 @@
+{
+  "call_id": "Q4-noisy_ambiguous",
+  "transcript": [
+    {
+      "t_start": 0.0,
+      "t_end": 5.0,
+      "speaker": "agent",
+      "text": "Hello, this is Aisha from Sentinel Health Insurance. This call is being recorded for quality and training purposes. Insurance is the subject matter of solicitation.",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 5.0,
+      "t_end": 9.0,
+      "speaker": "customer",
+      "text": "uh hmm yeah okay um traffic is bad hang on",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 9.0,
+      "t_end": 12.0,
+      "speaker": "agent",
+      "text": "Take your time.",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 12.0,
+      "t_end": 16.0,
+      "speaker": "customer",
+      "text": "maybe later I don't know, just looking, nothing specific",
+      "asr_latency_ms": 120.0
+    },
+    {
+      "t_start": 16.0,
+      "t_end": 19.0,
+      "speaker": "agent",
+      "text": "Of course. I will not push a plan today.",
+      "asr_latency_ms": 120.0
+    }
+  ],
+  "nudges": [],
+  "suppressed": [],
+  "controller": {
+    "emitted": 0,
+    "suppressed": 0,
+    "by_kind_emitted": {},
+    "by_kind_suppressed": {},
+    "suppress_reasons": {}
+  },
+  "latency": {
+    "asr": {
+      "count": 5,
+      "p50_ms": 120.0,
+      "p95_ms": 120.0,
+      "max_ms": 120.0,
+      "mean_ms": 120.0
+    },
+    "signal_extraction": {
+      "count": 5,
+      "p50_ms": 2463.3,
+      "p95_ms": 2768.7,
+      "max_ms": 2768.7,
+      "mean_ms": 2230.3
+    },
+    "e2e_chunk": {
+      "count": 2,
+      "p50_ms": 1116.6,
+      "p95_ms": 1116.6,
+      "max_ms": 1116.6,
+      "mean_ms": 1116.6
+    }
+  },
+  "agent_disclosed": true
+}
